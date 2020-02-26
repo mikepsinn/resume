@@ -14,8 +14,8 @@ description: Web Development - Data Science - Mobile Development
 skills: Web Development - Data Science - Mobile Development
 meta_author: Sinn Mike
 keywords: quantimodo, think by numbers, web development, business intelligence
-google_verify: 
-bing_verify: 
+google_verify:
+bing_verify:
 contact: static
 disqus_shortname: mikepsinn
 color:
@@ -42,8 +42,8 @@ social:
 # - title: bitbucket
 #   url: http://bitbucket.com/mikepsinn
 address:
-- line: 167 Glenwood Dr.
-- line: Glen Carbon, IL 62034
+- line: 601 Hillsboro Ave, Apt B
+- line: Edwardsville, IL 62025
 credits: <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a>
   <br> <a href="http://startbootstrap.com">Start Bootstrap</a>
 markdown: kramdown
