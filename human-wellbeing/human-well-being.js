@@ -1,4 +1,4 @@
-
+// https://docs.google.com/spreadsheets/d/1JBN9bd7aSI4_IxXzmrmXhy4em8z88xL0Z3BbT_N9c1Q/edit#gid=1167400346
 function millisToYear(m) {
     return m / 1000 / 365 / 86400 + 1970;
 }
@@ -100,7 +100,7 @@ var series = {
     },
     gdp: {
         series: {
-            name: 'GDP per capita',
+            name: 'GDP per capita (1990 USD)',
             color: '#0F9D58',
             visible: true,
             data: [
@@ -161,7 +161,24 @@ var series = {
                 [1970, 3282],
                 [1980, 4231],
                 [1990, 5204],
-                [2000, 6539]
+                [2000, 6539],
+                [2001, 6606.76882402707],
+                [2002, 6733.31673011844],
+                [2003, 6861.93919204738],
+                [2004, 7166.8989001692],
+                [2005, 7589.41677241963],
+                [2006, 7960.07074873096],
+                [2007, 8368.06673011844],
+                [2008, 8591.42724196277],
+                [2009, 8428.92036802031],
+                [2010, 8946.17629018612],
+                [2011, 9395.66338832487],
+                [2012, 9557.47874365482],
+                [2013, 9707.53828257191],
+                [2014, 9861.74693316413],
+                [2015, 10027.0198815567],
+                [2016, 10078.1922588832],
+
             ]
         },
         yAxis: {
@@ -958,13 +975,27 @@ series.lifeExpectancy.series.visible = true;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = true;
+Highcharts.stockChart('gdp-end-container',
+    getConfig(
+        'logarithmic',
+        //'linear',
+        false,
+        'The End of the Wealth Explosion',
+        1600,
+        2016,
+        'The advent of the printing press allowed the brains of geniuses to improve the brains of millions of ' +
+        'crappier brains through the transmission of ideas.  The scientific method became widely adopted, allowing ' +
+        'empiricism to displace gut intuition in all efforts to improve the human condition. ',
+        generalEvents));
+series.lifeExpectancy.series.visible = true;
+series.books.series.visible = false;
+series.gdp.series.visible = true;
+series.democracy.series.visible = true;
 Highcharts.stockChart('life-expectancy-annotations-container',
     getConfig('logarithmic',
         true,
         'Events Leading to the Health Explosion',
         1775,
         2000,
-        'The advent of the printing press allowed the brains of geniuses to improve the brains of millions of ' +
-        'crappier brains through the transmission of ideas.  The scientific method became widely adopted, allowing ' +
-        'empiricism to displace gut intuition in all efforts to improve the human condition. ',
+        'It appears that the discovery of cells and germs were the primary discoveries preceding the explosion in human lifespan.',
         healthEvents));
