@@ -15,6 +15,13 @@ var showModal = function(modalHtml) {
     modalTextElement.innerHTML = modalHtml;
     modal.style.display = "block";
 };
+var colors = {
+    red: "#DB4437",
+    green: "#0F9D58",
+    blue: "#4285F4",
+    yellow: "#F4B400",
+    purple: "#7B1FA2",
+};
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -26,10 +33,489 @@ window.onclick = function(event) {
     }
 };
 var series = {
-    lifeExpectancy: {
+    newDrugs: {
         series: {
-            name: 'Life Expectancy',
-            color: '#DB4437',
+            name: 'New Drugs Approved',
+            color: colors.blue,
+            visible: true,
+            data: [
+                // [1944, 137],
+                // [1945, 132],
+                // [1946, 114],
+                // [1947, 145],
+                // [1948, 194],
+                [1949, 360],
+                [1950, 233],
+                [1951, 256],
+                [1952, 194],
+                [1953, 454],
+                [1954, 226],
+                [1955, 343],
+                [1956, 346],
+                [1957, 334],
+                [1958, 280],
+                [1959, 225],
+                [1960, 222],
+                [1961, 155],
+                [1962, 109],
+                [1963, 67],
+                [1964, 83],
+                [1965, 53],
+                [1966, 40],
+                //[1967, 189],
+                [1968, 59],
+                [1969, 38],
+                [1970, 51],
+                [1971, 26],
+                [1972, 57],
+                [1973, 50],
+                [1974, 85],
+                [1975, 71],
+                [1976, 72],
+                [1977, 63],
+                [1978, 86],
+                [1979, 94],
+                [1980, 114],
+                [1981, 96],
+                [1982, 116],
+                [1983, 94],
+                [1984, 142],
+                [1985, 100],
+                [1986, 98],
+                [1987, 69],
+                [1988, 67],
+                [1989, 87],
+                [1990, 64],
+                [1991, 63],
+                [1992, 91],
+                [1993, 70],
+                [1994, 62],
+                [1995, 82],
+                [1996, 131],
+                [1997, 121],
+                [1998, 90],
+                [1999, 83],
+                [2000, 98],
+                [2001, 66],
+                [2002, 78],
+                [2003, 72],
+                [2004, 119],
+                [2005, 80],
+                [2006, 101],
+                [2007, 78],
+                [2008, 89],
+                [2009, 90],
+                [2010, 93],
+                [2011, 99],
+            ]
+        },
+        yAxis: {
+            labels: {
+                format: '{value}'
+            },
+        },
+    },
+    USLifeExpectancy: {
+        series: {
+            source: 'https://www.statista.com/statistics/1040079/life-expectancy-united-states-all-time/',
+            name: 'US Life Expectancy',
+            color: colors.red,
+            visible: true,
+            yAxis: 0,
+            data: [
+                [1800, 36],
+                [1860, 39.4],
+                [1865, 35.1],
+                [1870, 39.4],
+                [1880, 39.4],
+                [1890, 45.2],
+                [1901, 49.3],
+                [1902, 50.5],
+                [1903, 50.6],
+                [1904, 49.6],
+                [1905, 50.3],
+                [1906, 50.1],
+                [1907, 50.2],
+                [1908, 51.9],
+                [1909, 52.8],
+                [1910, 51.8],
+                [1911, 53.4],
+                [1912, 54.1],
+                [1913, 53.5],
+                [1914, 54.6],
+                [1915, 55.1],
+                [1916, 54.2],
+                [1917, 54],
+                [1918, 47.2],
+                [1919, 55.3],
+                [1920, 55.4],
+                [1921, 58.2],
+                [1922, 58.1],
+                [1923, 57.5],
+                [1924, 58.5],
+                [1925, 58.5],
+                [1926, 57.9],
+                [1927, 59.4],
+                [1928, 58.3],
+                [1929, 58.5],
+                [1930, 59.6],
+                [1931, 60.3],
+                [1932, 61],
+                [1933, 60.9],
+                [1934, 60.2],
+                [1935, 60.9],
+                [1936, 60.3],
+                [1937, 61],
+                [1938, 62.4],
+                [1939, 63.1],
+                [1940, 63.2],
+                [1941, 63.8],
+                [1942, 64.6],
+                [1943, 64.3],
+                [1944, 65.1],
+                [1945, 65.6],
+                [1946, 66.3],
+                [1947, 66.7],
+                [1948, 67.3],
+                [1949, 67.6],
+                [1950, 68.2],
+                [1951, 68.3],
+                [1952, 68.6],
+                [1953, 68.8],
+                [1954, 69.1],
+                [1955, 69.3],
+                [1956, 69.4],
+                [1957, 69.6],
+                [1958, 69.7],
+                [1959, 69.8],
+                [1960, 69.9],
+                [1961, 70],
+                [1962, 70.1],
+                [1963, 70.1],
+                [1964, 70.1],
+                [1965, 70.2],
+                [1966, 70.2],
+                [1967, 70.3],
+                [1968, 70.4],
+                [1969, 70.6],
+                [1970, 70.8],
+                [1971, 71],
+                [1972, 71.3],
+                [1973, 71.6],
+                [1974, 72],
+                [1975, 72.3],
+                [1976, 72.7],
+                [1977, 73],
+                [1978, 73.4],
+                [1979, 73.7],
+                [1980, 73.9],
+                [1981, 74.1],
+                [1982, 74.3],
+                [1983, 74.4],
+                [1984, 74.6],
+                [1985, 74.7],
+                [1986, 74.8],
+                [1987, 74.9],
+                [1988, 75],
+                [1989, 75.1],
+                [1990, 75.2],
+                [1991, 75.4],
+                [1992, 75.6],
+                [1993, 75.7],
+                [1994, 75.9],
+                [1995, 76.1],
+                [1996, 76.2],
+                [1997, 76.4],
+                [1998, 76.5],
+                [1999, 76.7],
+                [2000, 76.8],
+                [2001, 77],
+                [2002, 77.1],
+                [2003, 77.3],
+                [2004, 77.5],
+                [2005, 77.7],
+                [2006, 77.9],
+                [2007, 78.1],
+                [2008, 78.3],
+                [2009, 78.5],
+                [2010, 78.7],
+                [2011, 78.8],
+                [2012, 78.9],
+                [2013, 78.9],
+                [2014, 78.9],
+                [2015, 78.9],
+                [2016, 78.9],
+                [2017, 78.9],
+                [2018, 78.9],
+                [2019, 78.9],
+                [2020, 78.8],
+            ]
+        },
+        yAxis: {
+            labels: {
+                format: '{value}'
+            },
+        },
+    },
+    EuropeanLifeExpectancy: {
+        series: {
+            source: 'https://www.statista.com/statistics/1040079/life-expectancy-united-states-all-time/',
+            name: 'European Life Expectancy',
+            color: colors.purple,
+            visible: true,
+            yAxis: 0,
+            data: [
+                // [1770, 34.3],
+                // [1800, 33.3],
+                // [1820, 35.6],
+                [1850, 36.3],
+                [1870, 36.2],
+                [1900, 42.7],
+                [1913, 46.8],
+                [1950, 62],
+                [1951, 62.4],
+                [1952, 63.3],
+                [1953, 64.1],
+                [1954, 64.9],
+                [1955, 65.6],
+                [1956, 66.3],
+                [1957, 66.9],
+                [1958, 67.4],
+                [1959, 67.9],
+                [1960, 68.4],
+                [1961, 68.8],
+                [1962, 69.1],
+                [1963, 69.3],
+                [1964, 69.6],
+                [1965, 69.7],
+                [1966, 69.9],
+                [1967, 70],
+                [1968, 70.2],
+                [1969, 70.3],
+                [1970, 70.4],
+                [1971, 70.5],
+                [1972, 70.6],
+                [1973, 70.7],
+                [1974, 70.8],
+                [1975, 70.8],
+                [1976, 70.9],
+                [1977, 71],
+                [1978, 71.1],
+                [1979, 71.2],
+                [1980, 71.3],
+                [1981, 71.5],
+                [1982, 71.6],
+                [1983, 71.8],
+                [1984, 72.1],
+                [1985, 72.3],
+                [1986, 72.5],
+                [1987, 72.7],
+                [1988, 72.8],
+                [1989, 72.8],
+                [1990, 72.8],
+                [1991, 72.8],
+                [1992, 72.8],
+                [1993, 72.7],
+                [1994, 72.8],
+                [1995, 72.8],
+                [1996, 72.9],
+                [1997, 73],
+                [1998, 73.1],
+                [1999, 73.2],
+                [2000, 73.4],
+                [2001, 73.5],
+                [2002, 73.7],
+                [2003, 73.9],
+                [2004, 74.2],
+                [2005, 74.5],
+                [2006, 74.8],
+                [2007, 75.1],
+                [2008, 75.5],
+                [2009, 75.9],
+                [2010, 76.3],
+                [2011, 76.6],
+                [2012, 77],
+                [2013, 77.3],
+                [2014, 77.6],
+                [2015, 77.8],
+                [2016, 78.1],
+                [2017, 78.3],
+                [2018, 78.4],
+                [2019, 78.6],
+
+            ]
+        },
+        yAxis: {
+            labels: {
+                format: '{value}'
+            },
+        },
+    },
+    SwissLifeExpectancy: {
+        series: {
+            source: 'https://www.statista.com/statistics/1040079/life-expectancy-united-states-all-time/',
+            name: 'Swiss Life Expectancy',
+            color: colors.purple,
+            visible: true,
+            yAxis: 0,
+            data: [
+                [1876, 40],
+                [1877, 40],
+                [1878, 40.5],
+                [1879, 41.8],
+                [1880, 42.4],
+                [1881, 41.8],
+                [1882, 43],
+                [1883, 45],
+                [1884, 45],
+                [1885, 43.9],
+                [1886, 44.7],
+                [1887, 45.4],
+                [1888, 46],
+                [1889, 45.1],
+                [1890, 45],
+                [1891, 44.7],
+                [1892, 47.2],
+                [1893, 46],
+                [1894, 45.8],
+                [1895, 46.8],
+                [1896, 48.9],
+                [1897, 49.1],
+                [1898, 48.2],
+                [1899, 49.3],
+                [1900, 47.5],
+                [1901, 48.9],
+                [1902, 50.4],
+                [1903, 50],
+                [1904, 49.2],
+                [1905, 49.7],
+                [1906, 50.7],
+                [1907, 51.2],
+                [1908, 52.3],
+                [1909, 51.6],
+                [1910, 52.9],
+                [1911, 51.7],
+                [1912, 54.4],
+                [1913, 54.2],
+                [1914, 55.1],
+                [1915, 55.9],
+                [1916, 56.5],
+                [1917, 55.8],
+                [1918, 46.3],
+                [1919, 54.9],
+                [1920, 54.3],
+                [1921, 57.8],
+                [1922, 58.5],
+                [1923, 60],
+                [1924, 59.5],
+                [1925, 59.9],
+                [1926, 60.6],
+                [1927, 60.1],
+                [1928, 60.4],
+                [1929, 60.2],
+                [1930, 61.4],
+                [1931, 61.2],
+                [1932, 61.2],
+                [1933, 62.4],
+                [1934, 62.8],
+                [1935, 62.1],
+                [1936, 63.2],
+                [1937, 63.5],
+                [1938, 63.8],
+                [1939, 64],
+                [1940, 63.5],
+                [1941, 64.9],
+                [1942, 65.6],
+                [1943, 65.8],
+                [1944, 64.8],
+                [1945, 65.4],
+                [1946, 66],
+                [1947, 66.2],
+                [1948, 67.3],
+                [1949, 67.9],
+                [1950, 68.7],
+                [1951, 68.8],
+                [1952, 69.2],
+                [1953, 69.5],
+                [1954, 69.8],
+                [1955, 70.1],
+                [1956, 70.4],
+                [1957, 70.6],
+                [1958, 70.8],
+                [1959, 71],
+                [1960, 71.2],
+                [1961, 71.4],
+                [1962, 71.5],
+                [1963, 71.7],
+                [1964, 71.9],
+                [1965, 72.1],
+                [1966, 72.3],
+                [1967, 72.5],
+                [1968, 72.7],
+                [1969, 72.9],
+                [1970, 73.1],
+                [1971, 73.3],
+                [1972, 73.6],
+                [1973, 73.9],
+                [1974, 74.2],
+                [1975, 74.5],
+                [1976, 74.7],
+                [1977, 75],
+                [1978, 75.2],
+                [1979, 75.5],
+                [1980, 75.7],
+                [1981, 75.9],
+                [1982, 76],
+                [1983, 76.2],
+                [1984, 76.5],
+                [1985, 76.7],
+                [1986, 76.9],
+                [1987, 77.1],
+                [1988, 77.3],
+                [1989, 77.4],
+                [1990, 77.6],
+                [1991, 77.7],
+                [1992, 77.9],
+                [1993, 78.1],
+                [1994, 78.3],
+                [1995, 78.5],
+                [1996, 78.8],
+                [1997, 79.1],
+                [1998, 79.3],
+                [1999, 79.6],
+                [2000, 79.9],
+                [2001, 80.1],
+                [2002, 80.4],
+                [2003, 80.6],
+                [2004, 80.9],
+                [2005, 81.2],
+                [2006, 81.4],
+                [2007, 81.7],
+                [2008, 81.9],
+                [2009, 82.1],
+                [2010, 82.3],
+                [2011, 82.5],
+                [2012, 82.6],
+                [2013, 82.8],
+                [2014, 83],
+                [2015, 83.1],
+                [2016, 83.3],
+                [2017, 83.5],
+                [2018, 83.6],
+                [2019, 83.8],
+
+            ]
+        },
+        yAxis: {
+            labels: {
+                format: '{value}'
+            },
+        },
+    },
+    globalLifeExpectancy: {
+        series: {
+            name: 'Global Life Expectancy',
+            color: colors.red,
             visible: true,
             data: [
                 [-10000, 28.5],
@@ -629,6 +1115,25 @@ var series = {
                 format: '{value}',
             },
         }
+    },
+    ama: {
+        series: {
+            name: 'Members of the AMA',
+            color: '#F4B400',
+            visible: true,
+            data: [
+                [1000, 1],
+                [1848, 1],
+                [1900, 8000],
+                [1910, 70000],
+                [2016, 240359],
+            ]
+        },
+        yAxis: {
+            labels: {
+                format: '{value}',
+            },
+        }
     }
 };
 function getAnnotation(title, year, modalHtml, height){
@@ -665,189 +1170,395 @@ function getAnnotation(title, year, modalHtml, height){
         }
     }
 }
-var healthEvents = [
-    getAnnotation("Cells", 1838,
-        "<p>" +
-        "In 1838 Matthias Jakob Shleiden discovers that all plants are made of cells and, within the same year, " +
-        "Theodor Schwann discovered that all animals are made of cells as well." +
-        "</p>" +
-        "<p>" +
-        "Karl Theodor Ernst von Siebold suggests" +
-        " the name 'Cell Theory' for the proposition that all animals are made of cells." +
-        "</p>" +
-        "<p>" +
-        "In 1845, Karl Theodor Ernst von " +
-        "Siebold discovered that microbes are also made of cells too, though not many cells, just one cell." +
-        "</p>", 29),
-    getAnnotation("Medical Imaging", 1895,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-        "<p>" +
-        "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
-        "\n" +
-        "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
-        "\n" +
-        "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
-        "</p>", 34),
-    getAnnotation("Anesthesia", 1846,
-        "<p>" +
-        "Before the first use of a general anaesthetic in the mid-19th century, surgery was undertaken only as a last resort, with several patients opting for death rather than enduring the excruciating ordeal. Although there were countless earlier experiments with anaesthesia dating as far back to 4000 BC – William T. G. Morton made history in 1846 when he successfully used ether as an anaesthetic during surgery. Soon after, a faster-acting substance called chloroform became widely used, but was considered high-risk after several fatalities were reported. Over the 150 years since, safer anaesthetics have been developed, allowing millions of life-saving, painless operations to take place." +
-        "</p>", 30),
-    getAnnotation("Germs", 1860,
-        "<p>Before the ‘germ’ theory came about, the widely believed theory was that disease was caused by ‘spontaneous generation’. In other words, physicians of the time thought that disease could appear out of thin air, rather than being air-borne or transferred via skin-to-skin contact. In 1861, French microbiologist Louis Pasteur proved through a simple experiment that infectious disease was a result of an invasion of specific microscopic organisms - also known as pathogens - into living hosts. This new understanding marked a significant turning point in how diseases were treated, controlled and prevented, helping to prevent devastating epidemics that were responsible for thousands of deaths every year, such as the plague, dysentery and typhoid fever.&nbsp;&nbsp;</p>",
-        30),
-    getAnnotation("Vaccines", 1799,
-        "<div class=\"edit\"><div class=\"row\"><div class=\"col-md-12\"><img src=\"https://info.Proclinical.com/hubfs/vaccines.jpg\" alt=\"vaccines\" class=\"initial loading\" data-was-processed=\"true\"></div><div><br></div></div></div>" +
-        "<p>" +
-        "It is difficult to pinpoint when vaccines became an accepted practice, mostly because the journey to " +
-        "discovery was long and complicated. Beginning with an attempt by Edward Jenner in 1796 to use" +
-        " inoculations to tame the infamous smallpox virus, the usefulness and popularity of vaccines " +
-        "grew very quickly. Throughout the 1800s and early 1900s, various vaccinations were created to combat" +
-        " some of the world’s deadliest diseases, including smallpox, rabies, tuberculosis, and cholera." +
-        " Over the course of 200 years, one of the deadliest diseases known to man – the small pox – was" +
-        " wiped off the face of the earth. Today, vaccines continue to save millions of lives each year -" +
-        " including jabs that protect against deadly flu strains and can help prevent some cancers."+
-        "</p>", 29),
-    getAnnotation("Heart Surgery", 1923,
-        "<p>" +
-        "Eliot Cutler performs the world’s first successful heart valve surgery at the Peter Bent Brigham " +
-        "Hospital, today part of Brigham and Women’s Hospital." +
-        "</p>", 35),
-    getAnnotation("Penicillin", 1928,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/antibiotics.jpg\" alt=\"antibiotics\" class=\"loading\" data-was-processed=\"true\"></div>"+
-        "<p>" +
-        "Alexander Fleming’s penicillin, the world’s first antibiotic, completely revolutionised the war against deadly bacteria. Famously, the Scottish biologist accidentally discovered the anti-bacterial ‘mould’ in a petri dish in 1928. However, Fleming’s incredible findings were not properly recognised until the 1940s, when they began being mass-produced by American drug companies for use in World War II. Two other scientists were responsible for the mass distribution of penicillin, Australian Howard Florey and Nazi-Germany refugee Ernst Chain, and their development of the substance ended up saving millions of future lives. Unfortunately, over the years certain bacterium have become increasingly resistant to antibiotics, leading to a world-wide crisis that calls for the pharmaceutical industry to develop new anti-bacterial treatments as soon as possible." +
-        "</p>", 41),
-    getAnnotation("Polio Treatment", 1929,
-        "<p>" +
-        "In a first, the newly developed Drinker Respirator (iron lung) saves a polio patient at Peter " +
-        "Bent Brigham in collaboration with Children's Hospital Medical Center, today Boston Children’s " +
-        "Hospital, and the Harvard School of Public Health." +
-        "</p>", 45),
-    getAnnotation("Organ Transplants", 1954,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Transplant.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-        "<p>" +
-        "In December 1954, the first successful kidney transplant was carried out by Dr Joseph Murray and Dr David Hume in Boston, USA. Despite many previous attempts in history, this was the first instance where the recipient of an organ transplant survived the operation. The turning point came when various technical issues were overcome, such as vascular anastomosis (the connection between two blood vessels), placement of the kidney and immune response. In 1963, the first lung transplant was carried out, followed by a pancreas/kidney in 1966, and liver and heart in 1967. Aside from saving thousands of lives in the years following, transplant procedures have also become increasingly innovative and complex, with doctors successfully completing the first hand transplant in 1998 and full-face transplant in 2010!" +
-        "</p>", 42),
-    getAnnotation("Antiviral Drugs", 1960,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/virus%202.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-        "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
-        48),
-    getAnnotation("Stem Cell Therapy", 1970,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/stem%20cells.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>" +
-        "<p>The incredible potential of stem cells was discovered in the late 1970s, when they were found inside human cord blood. Two specific characteristics make stem cells remarkable: they are unspecialised cells that can renew themselves through cell division even after being inactive, and under certain conditions can be used to make any type of human cell. This discovery has enormous potential and stem cell therapy has already been used to treat leukaemia and other blood disorders, as well as in bone marrow transplantation. Research is currently ongoing to use stem cells to treat spinal cord injuries and a number of neurological conditions such as Alzheimer’s, Parkinson’ and strokes. However, due to the ethical issues surrounding the&nbsp;<a href=\"https://www.eurostemcell.org/embryonic-stem-cell-research-ethical-dilemma\" target=\"_blank\">use of embryonic stem cells</a>, researchers are likely to face many obstacles when developing stem cell-based therapy.&nbsp;&nbsp;</p>" +
-        48),
-    getAnnotation("Immunotherapy", 1979,
-        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Artificial%20Intelligence.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-        "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
-        55),
-];
-var generalEvents = [
-    getAnnotation("Little Ice Age", 1250,
-        "<p>" +
-        "As Europe moved out of the Medieval Warm Period and into the Little Ice Age, a decrease in " +
-        "temperature and a great number of devastating floods disrupted harvests and caused mass famine. "+
-        "</p>", 28),
-    getAnnotation("Great Famine", 1317,
-        "<p>" +
-        "The cold and the rain proved to be particularly disastrous from 1315 to 1317 in which poor weather" +
-        " interrupted the maturation of many grains and beans and flooding turned fields rocky and barren. "+
-        "</p>", 28),
-    getAnnotation("Hundred Years' War & Black Death", 1337,
-        "<p>" +
-        "The Hundred Years' War was a series of conflicts from 1337 to 1453, waged between the House of " +
-        "Plantagenet, rulers of England and the French House of Valois, over the right to rule the Kingdom of France. "+
-        "</p>"+
-        "<h1>Black Death</h1>" +
-        "<p>" +
-        "The Black Death, also known as the Pestilence, the Great Bubonic Plague, the Great Plague or the " +
-        "Plague, or less commonly the Great Mortality or the Black Plague, was the most devastating pandemic" +
-        " recorded in human history, resulting in the deaths of up to 75-125 million people globally " +
-        "(in Eurasia and North Africa), peaking in Europe from 1347 to 1351."+
-        "</p>", 29),
-    getAnnotation("Printing Press", 1470,
-        "<p>" +
-        "Through transmission of ideas, this printing press enabled the brain of one genius to " +
-        "improve millions of crappier brains."+
-        "</p>", 29),
-    getAnnotation("Trigonometry", 1591,
-        "<h2>1591: Francois Viete Invents Analytical Trigonometry</h2>" +
-        "<p>" +
-        "Viete's invention is essential to the study of physics and astronomy."+
-        "</p>", 29),
-    getAnnotation("Scientific Method", 1637,
-        "<h2>1637: Rene Descartes Publishes His Discourse On Method</h2>" +
-        "<p>" +
-        "Descartes' work sets forth the principles of deductive reasoning as used in the modern scientific method."+
-        "</p>", 30),
-    getAnnotation("Gravity", 1687,
-        "<h2>1687: Isaac Newton Publishes Philosophia Naturalis Principia Mathematica</h2>" +
-        "<p>" +
-        "Perhaps the most important event in the history of science, the Principia lays out Newton's " +
-        "comprehensive model of the universe as organized according to the law of universal gravitation. " +
-        "The Principia represents the integration of the works of all of the great astronomers who preceded " +
-        "Newton, and remains the basis of modern physics and astronomy."+
-        "</p>", 29),
-    getAnnotation("Steam Engine", 1712,
-        "<p>" +
-        "The first practical steam engine is invented by Thomas Newcomen. Steam would become an important source of power for the Industrial Revolution."+
-        "</p>", 29),
-    getAnnotation("Industrial Revolution", 1750,
-        "<p>" +
-        "The First Industrial Revolution begins around 1760 in the textile industry in Great Britain. " +
-        "Over the next decade, manufacturing will move from hand production in the home to machine production in factories."+
-        "</p>", 29),
-    getAnnotation("Cotton Gin", 1770,
-        "<p>" +
-        "Eli Whitney invents the cotton gin greatly increasing the productivity of processing cotton."+
-        "</p>", 29),
-    getAnnotation("Steamboats", 1807,
-        "<p>" +
-        "Robert Fulton starts the first successful steamboat operation with his boat the Clermont."+
-        "</p>", 29),
-    getAnnotation("Trains", 1816,
-        "<p>" +
-        "1816 - The engineer George Stephenson patented the steam engine locomotive which would earn him the title of “Father of the Railways”. " +
-        "</p>" +
-        "<p>" +
-        "1825 -The first passenger railway opens with Locomotion No.1 carrying passengers on a public line."+
-        "</p>", 29),
-    getAnnotation("Telephone", 1876,
-        "<p>" +
-        " Alexander Graham Bell invents the telephone." +
-        "</p>", 30),
-    getAnnotation("Light Bulb", 1879,
-        "<p>" +
-        "Thomas Edison invents the first practical incandescent light bulb. It will allow factories to remain open after dark." +
-        "</p>", 34),
-    getAnnotation("Power Plants", 1891,
-        "<p>" +
-        "The first modern electrical power station is completed to provide power to central London." +
-        "</p>", 30),
-    getAnnotation("Cars", 1908,
-        "<p>" +
-        "Henry Ford begins production on the Model T Ford. He uses the assembly line to build the first affordable automobile." +
-        "</p>", 35),
-    // getAnnotation("Started Washing Our Damn Hands", 1905 ,
-    //     "<p>" +
-    //     "In 1905 Florence Nightingale discovered that being clean was essential in patient care and reducing " +
-    //     "infectious diseases and earns an award for it. Joseph Lister developed a use of chemicals to help in " +
-    //     "reducing the spreading of microbes and also wins an award for it, and William Stewart Halsted was one" +
-    //     " of the very first to use gloves while performing surgery as a way to prevent the spread of microbes" +
-    //     "</p>", 34),
-];
+var events = {
+    general: [
+        getAnnotation("Little Ice Age", 1250,
+            "<p>" +
+            "As Europe moved out of the Medieval Warm Period and into the Little Ice Age, a decrease in " +
+            "temperature and a great number of devastating floods disrupted harvests and caused mass famine. "+
+            "</p>", 28),
+        getAnnotation("Great Famine", 1317,
+            "<p>" +
+            "The cold and the rain proved to be particularly disastrous from 1315 to 1317 in which poor weather" +
+            " interrupted the maturation of many grains and beans and flooding turned fields rocky and barren. "+
+            "</p>", 28),
+        getAnnotation("Hundred Years' War & Black Death", 1337,
+            "<p>" +
+            "The Hundred Years' War was a series of conflicts from 1337 to 1453, waged between the House of " +
+            "Plantagenet, rulers of England and the French House of Valois, over the right to rule the Kingdom of France. "+
+            "</p>"+
+            "<h1>Black Death</h1>" +
+            "<p>" +
+            "The Black Death, also known as the Pestilence, the Great Bubonic Plague, the Great Plague or the " +
+            "Plague, or less commonly the Great Mortality or the Black Plague, was the most devastating pandemic" +
+            " recorded in human history, resulting in the deaths of up to 75-125 million people globally " +
+            "(in Eurasia and North Africa), peaking in Europe from 1347 to 1351."+
+            "</p>", 29),
+        getAnnotation("Printing Press", 1470,
+            "<p>" +
+            "Through transmission of ideas, this printing press enabled the brain of one genius to " +
+            "improve millions of crappier brains."+
+            "</p>", 29),
+        getAnnotation("Trigonometry", 1591,
+            "<h2>1591: Francois Viete Invents Analytical Trigonometry</h2>" +
+            "<p>" +
+            "Viete's invention is essential to the study of physics and astronomy."+
+            "</p>", 29),
+        getAnnotation("Scientific Method", 1637,
+            "<h2>1637: Rene Descartes Publishes His Discourse On Method</h2>" +
+            "<p>" +
+            "Descartes' work sets forth the principles of deductive reasoning as used in the modern scientific method."+
+            "</p>", 30),
+        getAnnotation("Gravity", 1687,
+            "<h2>1687: Isaac Newton Publishes Philosophia Naturalis Principia Mathematica</h2>" +
+            "<p>" +
+            "Perhaps the most important event in the history of science, the Principia lays out Newton's " +
+            "comprehensive model of the universe as organized according to the law of universal gravitation. " +
+            "The Principia represents the integration of the works of all of the great astronomers who preceded " +
+            "Newton, and remains the basis of modern physics and astronomy."+
+            "</p>", 29),
+        getAnnotation("Steam Engine", 1712,
+            "<p>" +
+            "The first practical steam engine is invented by Thomas Newcomen. Steam would become an important source of power for the Industrial Revolution."+
+            "</p>", 29),
+        getAnnotation("Industrial Revolution", 1750,
+            "<p>" +
+            "The First Industrial Revolution begins around 1760 in the textile industry in Great Britain. " +
+            "Over the next decade, manufacturing will move from hand production in the home to machine production in factories."+
+            "</p>", 29),
+        getAnnotation("Cotton Gin", 1770,
+            "<p>" +
+            "Eli Whitney invents the cotton gin greatly increasing the productivity of processing cotton."+
+            "</p>", 29),
+        getAnnotation("Steamboats", 1807,
+            "<p>" +
+            "Robert Fulton starts the first successful steamboat operation with his boat the Clermont."+
+            "</p>", 29),
+        getAnnotation("Trains", 1816,
+            "<p>" +
+            "1816 - The engineer George Stephenson patented the steam engine locomotive which would earn him the title of “Father of the Railways”. " +
+            "</p>" +
+            "<p>" +
+            "1825 -The first passenger railway opens with Locomotion No.1 carrying passengers on a public line."+
+            "</p>", 29),
+        getAnnotation("Telephone", 1876,
+            "<p>" +
+            " Alexander Graham Bell invents the telephone." +
+            "</p>", 30),
+        getAnnotation("Light Bulb", 1879,
+            "<p>" +
+            "Thomas Edison invents the first practical incandescent light bulb. It will allow factories to remain open after dark." +
+            "</p>", 34),
+        getAnnotation("Power Plants", 1891,
+            "<p>" +
+            "The first modern electrical power station is completed to provide power to central London." +
+            "</p>", 30),
+        getAnnotation("Cars", 1908,
+            "<p>" +
+            "Henry Ford begins production on the Model T Ford. He uses the assembly line to build the first affordable automobile." +
+            "</p>", 35),
+        // getAnnotation("Started Washing Our Damn Hands", 1905 ,
+        //     "<p>" +
+        //     "In 1905 Florence Nightingale discovered that being clean was essential in patient care and reducing " +
+        //     "infectious diseases and earns an award for it. Joseph Lister developed a use of chemicals to help in " +
+        //     "reducing the spreading of microbes and also wins an award for it, and William Stewart Halsted was one" +
+        //     " of the very first to use gloves while performing surgery as a way to prevent the spread of microbes" +
+        //     "</p>", 34),
+    ],
+    health: [
+        getAnnotation("First Clinical Trial", 1740,
+            "<p>The first proper clinical trial was conducted by the physician <a href=\"/wiki/James_Lind\" " +
+            "title=\"James Lind\">James Lind</a>.<sup id=\"cite_ref-16\" class=\"reference\"><a href=\"#cite_note-16\">[16]</a></sup> " +
+            "The disease <a href=\"/wiki/Scurvy\" title=\"Scurvy\">scurvy</a>, now known to be caused by a " +
+            "<a href=\"/wiki/Vitamin_C\" title=\"Vitamin C\">Vitamin C</a> deficiency, would often have terrible effects on the" +
+            " welfare of the crew of long distance ocean voyages. In 1740, the catastrophic result of " +
+            "<a href=\"/wiki/George_Anson,_1st_Baron_Anson\" title=\"George Anson, 1st Baron Anson\">Anson</a>'s " +
+            "<a href=\"/wiki/George_Anson%27s_voyage_around_the_world\" title=\"George Anson's voyage around the world\">circumnavigation</a>" +
+            " attracted much attention in Europe; out of 1900 men, 1400 had died, most of them allegedly from having contracted scurvy." +
+            "<sup id=\"cite_ref-17\" class=\"reference\"><a href=\"#cite_note-17\">[17]</a></sup> " +
+            "<a href=\"/wiki/John_Woodall\" title=\"John Woodall\">John Woodall</a>, an English military surgeon of the " +
+            "<a href=\"/wiki/British_East_India_Company\" class=\"mw-redirect\" title=\"British East India Company\">" +
+            "British East India Company</a>, had recommended the consumption of " +
+            "<a href=\"/wiki/Citrus_fruit\" class=\"mw-redirect\" title=\"Citrus fruit\">citrus fruit</a>" +
+            " (it has an <a href=\"/wiki/Antiscorbutic\" class=\"mw-redirect\" title=\"Antiscorbutic\">antiscorbutic</a> effect)" +
+            " from the 17th century, but their use did not become widespread.<sup id=\"cite_ref-18\" class=\"reference\">" +
+            "<a href=\"#cite_note-18\">[18]</a></sup>\n" +
+            "</p>", 29),
+        getAnnotation("Vaccines", 1799,
+            "<div class=\"edit\"><div class=\"row\"><div class=\"col-md-12\"><img src=\"https://info.Proclinical.com/hubfs/vaccines.jpg\" alt=\"vaccines\" class=\"initial loading\" data-was-processed=\"true\"></div><div><br></div></div></div>" +
+            "<p>" +
+            "It is difficult to pinpoint when vaccines became an accepted practice, mostly because the journey to " +
+            "discovery was long and complicated. Beginning with an attempt by Edward Jenner in 1796 to use" +
+            " inoculations to tame the infamous smallpox virus, the usefulness and popularity of vaccines " +
+            "grew very quickly. Throughout the 1800s and early 1900s, various vaccinations were created to combat" +
+            " some of the world’s deadliest diseases, including smallpox, rabies, tuberculosis, and cholera." +
+            " Over the course of 200 years, one of the deadliest diseases known to man – the small pox – was" +
+            " wiped off the face of the earth. Today, vaccines continue to save millions of lives each year -" +
+            " including jabs that protect against deadly flu strains and can help prevent some cancers."+
+            "</p>", 29),
+        getAnnotation("U.S. Pharmacopoeia", 1820,
+            "<p>A major task of nineteenth- and early twentieth-century pharmacy was to define what a drug was and to create\n" +
+            "       standards of composition, purity, and strength. Pioneering efforts in this direction had begun in 1820 with the\n" +
+            "       creation of the\n" +
+            "        <a href=\"https://www.fdareview.org/features/glossary/#usp\"><i>U.S. Pharmacopoeia</i> (<i>USP</i>)</a>\n" +
+            "       . A private, voluntary undertaking of physicians, pharmacists and colleges of pharmacy, the <i>USP</i> presented\n" +
+            "       a formulary of compositions and listed chemical compounds, crude drugs, fixed oils, and other substances\n" +
+            "       typically kept by a pharmacist (then called a pharmaceutist or an apothecary). Later the <i>USP</i> listed tests\n" +
+            "       for determining purity. Leading pharmacists regularly revised the\n" +
+            "        <a href=\"https://www.fdareview.org/features/glossary/#usp\"><i>USP</i></a>\n" +
+            "       as new and better drugs, compositions, and tests were discovered and created. \n" +
+            "    </p>", 29),
+        getAnnotation("Cells", 1838,
+            "<p>" +
+            "In 1838 Matthias Jakob Shleiden discovers that all plants are made of cells and, within the same year, " +
+            "Theodor Schwann discovered that all animals are made of cells as well." +
+            "</p>" +
+            "<p>" +
+            "Karl Theodor Ernst von Siebold suggests" +
+            " the name 'Cell Theory' for the proposition that all animals are made of cells." +
+            "</p>" +
+            "<p>" +
+            "In 1845, Karl Theodor Ernst von " +
+            "Siebold discovered that microbes are also made of cells too, though not many cells, just one cell." +
+            "</p>", 29),
+        getAnnotation("American Medical Association", 1849,
+            "AMA establishes a board to analyze quack remedies and nostrums and to enlighten the public in " +
+            "regard to the nature and danger of such remedies. " +
+            "The Department of Investigation (1913-1975) gathered and disseminated health fraud and quackery information" +
+            " for the public for over 60 years",
+            29),
+        getAnnotation("Medical Imaging", 1895,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
+            "\n" +
+            "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
+            "\n" +
+            "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
+            "</p>", 34),
+        getAnnotation("Anesthesia", 1846,
+            "<p>" +
+            "Before the first use of a general anaesthetic in the mid-19th century, surgery was undertaken only as a last resort, with several patients opting for death rather than enduring the excruciating ordeal. Although there were countless earlier experiments with anaesthesia dating as far back to 4000 BC – William T. G. Morton made history in 1846 when he successfully used ether as an anaesthetic during surgery. Soon after, a faster-acting substance called chloroform became widely used, but was considered high-risk after several fatalities were reported. Over the 150 years since, safer anaesthetics have been developed, allowing millions of life-saving, painless operations to take place." +
+            "</p>", 30),
+        getAnnotation("Germs", 1860,
+            "<p>Before the ‘germ’ theory came about, the widely believed theory was that disease was caused by ‘spontaneous generation’. In other words, physicians of the time thought that disease could appear out of thin air, rather than being air-borne or transferred via skin-to-skin contact. In 1861, French microbiologist Louis Pasteur proved through a simple experiment that infectious disease was a result of an invasion of specific microscopic organisms - also known as pathogens - into living hosts. This new understanding marked a significant turning point in how diseases were treated, controlled and prevented, helping to prevent devastating epidemics that were responsible for thousands of deaths every year, such as the plague, dysentery and typhoid fever.&nbsp;&nbsp;</p>",
+            30),
+        getAnnotation("Patent Medicines", 1880,
+            "Nonetheless, as early as the late nineteenth and early twentieth century, interest in clinical\n" +
+            "objectivity grew, spurred on not only by astounding successes in laboratory science and clinical\n" +
+            "medicine abroad (e.g. discovery of microbes, pasteurization of milk, development of anthrax and\n" +
+            "rabies vaccines) but because of the sorry state of therapeutics at the time in America. In 1880,\n" +
+            "patent medicines – a misnomer because nothing but the label and the bottle were actually\n" +
+            "patented or trademarked – constituted 28% of marketed drugs. By 1900, however, they\n" +
+            "represented 72% of drug sales and products with inert ingredients were promoted as vigorously,\n" +
+            "if not more so, than drugs with active ingredients. ",
+            30),
+        getAnnotation("Journal of the American Medical Association", 1883,
+            "Journal of the American Medical Association is first published; Nathan Davis is first editor. ",
+            30),
+        getAnnotation("Council on Pharmacy and Chemistry", 1905,
+            "The American Medical Association (AMA) began to push for federal evaluation of new medical\n" +
+            "products hoping to make a dent in the patent medicine industry, but it was unsuccessful. In 1905,\n" +
+            "the AMA formed its own Council on Pharmacy and Chemistry which levied a fee on\n" +
+            "manufacturers to evaluate their drugs for quality (ingredient testing) and safety. Drugs accepted\n" +
+            "by the Council could carry the AMA's Seal of Acceptance and only products with the seal had\n" +
+            "access to the advertising pages of the Journal of the American Medical Association (JAMA). The\n" +
+            "AMA's Chemical Laboratory tested commercial statements about the composition and purity of\n" +
+            "drugs in their labs, while the Council on Pharmacy and Chemistry followed up with safety\n" +
+            "evaluations and rudimentary efficacy evaluations designed to eliminate exaggerated or\n" +
+            "misleading therapeutic claims. 13 Although the Council eagerly sought evidence that drugs had\n" +
+            "an effect on the cause or course of a disease, the Seal was awarded to drugs that merely provided\n" +
+            "symptomatic relief. Although the Council would have liked to rely upon clinical studies to\n" +
+            "supplement laboratory studies submitted by drug manufacturers, they lacked the necessary\n" +
+            "funding to support such studies and the AMA did not authorize the Council to require them.\n" +
+            "Instead of relying on the anecdotal information provided by private practitioners, however, the\n" +
+            "Council relied heavily on the opinions and recommendations of Council members who were\n" +
+            "well-respected medical specialists and scientists, a progressive practice for the era. Once their\n" +
+            "evaluations became a regular feature in the Journal of the American Medical Association\n" +
+            "(JAMA) the Council began to make inroads against the commercialism that physicians had felt\n" +
+            "were \"debauching\" medical journals and \"tainting\" medical textbooks. The AMA's drug\n" +
+            "certification program remained in place until 1955. ",
+            30),
+        getAnnotation("Pure Food and Drugs Act", 1906,
+            "While the AMA Council on Pharmacy and Chemistry held out a carrot of certification to ethical\n" +
+            "drug products that met their standards, the first federal food and drug statute, the 1906 Pure Food\n" +
+            "and Drugs Act, wielded little in the way of a stick. The AMA had been unsuccessful in getting\n" +
+            "any kind of drug review in the new law and the statute merely provided a legal definition for the\n" +
+            "terms \"adulterated\" and \"misbranded\" as they related to both food and drug products and\n" +
+            "prescribed legal penalties for each offense. The law did empower the Bureau of Chemistry\n" +
+            "(forerunner of the U.S. Food and Drug Administration) to seize adulterated and misbranded\n" +
+            "products that moved in interstate commerce, but it simply adopted the drug standards as \n" +
+            "U.S. Food and Drug Administration\n" +
+            "www.fda.gov\n" +
+            "published in the U.S. Pharmacopeia and the National Formulary. The law also prohibited \"false\n" +
+            "and misleading\" statements on product labels. In the case of drugs, the law listed eleven so-called\n" +
+            "\"dangerous ingredients\" including opium (and its derivatives) and alcohol which, if they were\n" +
+            "present in the product, had to be listed on the drug label. This listing requirement alone inspired\n" +
+            "many manufacturers to abandon use of many dangerous ingredients following passage of the\n" +
+            "1906 Act. But efforts to prohibit false therapeutic claims on drug labels were defeated both by\n" +
+            "the Supreme Court and the U.S. Congress. ",
+            36),
+        getAnnotation("Published Standards for American Medical Schools", 1910,
+            "The Flexner Report, Medical Education in the United States and Canada, funded by the Carnegie" +
+            " Foundation and supported by the AMA, is published and facilitates new standards for medical schools",
+            30),
+        getAnnotation("Principles Of Experimental Design", 1920,
+            "<p>Sir <a href=\"/wiki/Ronald_A._Fisher\" class=\"mw-redirect\" title=\"Ronald A. Fisher\">" +
+            "Ronald A. Fisher</a>, while working for the <a href=\"/wiki/Rothamsted_experimental_station\" class=\"mw-redirect\" title=\"Rothamsted experimental station\">" +
+            "Rothamsted experimental station</a> in the field of agriculture, developed his <i>Principles of experimental design</i> " +
+            "in the 1920s as an accurate methodology for the proper design of experiments. Among his major ideas, was the importance of " +
+            "<a href=\"/wiki/Randomized_experiment\" title=\"Randomized experiment\">randomization</a> – the random" +
+            " assignment of individuals to different groups for the experiment;<sup id=\"cite_ref-24\" class=\"reference\">" +
+            "<a href=\"#cite_note-24\">[24]</a></sup> <a href=\"/wiki/Replication_(statistics)\" title=\"Replication (statistics)\">replication</a>" +
+            " – to reduce <a href=\"/wiki/Measurement_uncertainty\" title=\"Measurement uncertainty\">uncertainty</a>, " +
+            "measurements should be repeated and experiments replicated to identify sources of variation;<sup id=\"cite_ref-25\" class=\"reference\">" +
+            "<a href=\"#cite_note-25\">[25]</a></sup> <a href=\"/wiki/Blocking_(statistics)\" title=\"Blocking (statistics)\">blocking</a> –" +
+            " to arrange experimental units into groups of units that are similar to each other, and thus reducing irrelevant sources of variation; use of " +
+            "<a href=\"/wiki/Factorial_experiment\" title=\"Factorial experiment\">factorial experiments</a> – efficient at evaluating the effects and possible " +
+            "<a href=\"/wiki/Interaction_(statistics)\" title=\"Interaction (statistics)\">interactions</a> of several independent factors." +
+            "<sup id=\"cite_ref-MeinartTonascia_15-3\" class=\"reference\"><a href=\"#cite_note-MeinartTonascia-15\">[15]</a></sup>\n" +
+            "</p>",
+            35),
+        getAnnotation("Cooperative Investigations", 1920,
+            "During the 1920's, 30's and 40's medical researchers began to conduct \"cooperative\n" +
+            "investigations\" designed to overcome errors attributed to individual observers working in relative\n" +
+            "isolation and replace them with standardized evaluations of therapeutic research in hundreds of\n" +
+            "patients. 14 Therapeutic experimentation, however, did not begin to gain a true foothold in\n" +
+            "modern medicine until the U.S. legal system stopped equating experimentation with medical\n" +
+            "malpractice. As late as 1934, state courts seemed to uphold traditional views that the doctor was\n" +
+            "bound to act within accepted methods of clinical practice and that patients had not consented for\n" +
+            "their physician to deviate from these methods. 15 In a landmark state Supreme Court decision in\n" +
+            "1935, however, the state of Michigan seemed to recognize and authorize controlled clinical\n" +
+            "investigations as a part of medical practice without subjecting the researcher to strict liability\n" +
+            "(without fault) for any injury so long as the patient consented to the experiment and it did not\n" +
+            "\"vary too radically\" from accepted methods of procedure. 16 In particular, the Michigan Supreme\n" +
+            "Court accepted that experimentation was necessary not just to treat the individual, but also to\n" +
+            "help medicine progress. \"We recognize,\" noted the Court, \"the fact that if the general practice of\n" +
+            "medicine and surgery is to progress, there must be a certain amount of experimentation carried\n" +
+            "on.\" ",
+            35),
+        getAnnotation("Heart Surgery", 1923,
+            "<p>" +
+            "Eliot Cutler performs the world’s first successful heart valve surgery at the Peter Bent Brigham " +
+            "Hospital, today part of Brigham and Women’s Hospital." +
+            "</p>", 35),
+        getAnnotation("Penicillin", 1928,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/antibiotics.jpg\" alt=\"antibiotics\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "Alexander Fleming’s penicillin, the world’s first antibiotic, completely revolutionised the war against deadly bacteria. Famously, the Scottish biologist accidentally discovered the anti-bacterial ‘mould’ in a petri dish in 1928. However, Fleming’s incredible findings were not properly recognised until the 1940s, when they began being mass-produced by American drug companies for use in World War II. Two other scientists were responsible for the mass distribution of penicillin, Australian Howard Florey and Nazi-Germany refugee Ernst Chain, and their development of the substance ended up saving millions of future lives. Unfortunately, over the years certain bacterium have become increasingly resistant to antibiotics, leading to a world-wide crisis that calls for the pharmaceutical industry to develop new anti-bacterial treatments as soon as possible." +
+            "</p>", 41),
+        getAnnotation("Polio Treatment", 1929,
+            "<p>" +
+            "In a first, the newly developed Drinker Respirator (iron lung) saves a polio patient at Peter " +
+            "Bent Brigham in collaboration with Children's Hospital Medical Center, today Boston Children’s " +
+            "Hospital, and the Harvard School of Public Health." +
+            "</p>", 45),
+        getAnnotation("Therapeutic Trials Committee", 1930,
+            "<p>The <a href=\"/wiki/Medical_Research_Council_(United_Kingdom)\" title=\"Medical Research Council (United Kingdom)\">" +
+            "British Medical Research Council</a> officially recognized the importance of clinical trials from the 1930s." +
+            " The Council established the <i>Therapeutic Trials Committee</i> to advise and assist in the arrangement of properly " +
+            "controlled clinical trials on new products that seem likely on experimental grounds to have value in the treatment of disease." +
+            "<sup id=\"cite_ref-MeinartTonascia_15-4\" class=\"reference\"><a href=\"#cite_note-MeinartTonascia-15\">[15]</a></sup>\n" +
+            "</p>", 45),
+        getAnnotation("Food, Drug, and Cosmetic Act", 1938,
+            "\"Instead of going to market based on their own assessment of the drug, sponsors had to\n" +
+            "notify the FDA of their intent to market the drug by submitting an NDA (New Drug\n" +
+            "Application),\" explains Dr. Robert Temple, currently head of FDA's Office of Medical Policy.\n" +
+            "Although the new law did not specify any particular testing method(s), the law did require that\n" +
+            "drugs be studied by \"adequate tests by all methods reasonably applicable to show whether or not\n" +
+            "the drug is safe.\"Sponsors were required to demonstrate to FDA that they had carried out all\n" +
+            "reasonably applicable studies to demonstrate safety and that the drug was \"safe for use under the\n" +
+            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 45),
+        getAnnotation("Double Blind Studies", 1948,
+            "Following war trials of penicillin, British epidemiologist and biostatistician, A. Bradford Hill,\n" +
+            "was faced with the task of testing a promising antibiotic, streptomycin, against tuberculosis.\n" +
+            "Researchers in the United States studying the same drug had ample supplies and led to more\n" +
+            "effective treatment for patient subjects but produced less conclusive clinical trial data. 30 Hill and\n" +
+            "his colleagues, however, were faced with a severe shortage of the streptomycin drug they were\n" +
+            "studying. In post-war Britain, the central government could not afford to purchase more of the\n" +
+            "drug. Scarcity and expense, therefore, justified their decision to formally but randomly assign\n" +
+            "patients to control groups and treatment groups. This eliminated a well-known form of treatment\n" +
+            "\"bias\" in which physicians are known to select their healthier patients for experimental treatment\n" +
+            "leaving sicker patients in the control group. Hill's study was a true randomized study. It was not,\n" +
+            "however, \"double blinded\" – another way of insuring the objectivity of a trial by neutralizing the\n" +
+            "power of \"suggestion.\"\n" +
+            "In a double-blind clinical drug study, trials are designed in such a way that neither the patient nor\n" +
+            "the researcher knows who is receiving the treatment drug. 31 In Hill's study, streptomycin\n" +
+            "required injection, and the researchers did not wish to use inert injections. However the lack of\n" +
+            "true double-blinding had little impact on the results, since Hill was able to show conclusively\n" +
+            "that streptomycin could cure tuberculosis. When the results of his study were published in 1948,\n" +
+            "Hill's use of concurrent controls (randomized, controlled) was praised as having ushered in \"a\n" +
+            "new era of medicine.\" 3", 45),
+        getAnnotation("Organ Transplants", 1954,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Transplant.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "In December 1954, the first successful kidney transplant was carried out by Dr Joseph Murray and Dr David Hume in Boston, USA. Despite many previous attempts in history, this was the first instance where the recipient of an organ transplant survived the operation. The turning point came when various technical issues were overcome, such as vascular anastomosis (the connection between two blood vessels), placement of the kidney and immune response. In 1963, the first lung transplant was carried out, followed by a pancreas/kidney in 1966, and liver and heart in 1967. Aside from saving thousands of lives in the years following, transplant procedures have also become increasingly innovative and complex, with doctors successfully completing the first hand transplant in 1998 and full-face transplant in 2010!" +
+            "</p>", 42),
+        getAnnotation("Antiviral Drugs", 1960,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/virus%202.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
+            48),
+        getAnnotation("Stem Cell Therapy", 1970,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/stem%20cells.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>" +
+            "<p>The incredible potential of stem cells was discovered in the late 1970s, when they were found inside human cord blood. Two specific characteristics make stem cells remarkable: they are unspecialised cells that can renew themselves through cell division even after being inactive, and under certain conditions can be used to make any type of human cell. This discovery has enormous potential and stem cell therapy has already been used to treat leukaemia and other blood disorders, as well as in bone marrow transplantation. Research is currently ongoing to use stem cells to treat spinal cord injuries and a number of neurological conditions such as Alzheimer’s, Parkinson’ and strokes. However, due to the ethical issues surrounding the&nbsp;<a href=\"https://www.eurostemcell.org/embryonic-stem-cell-research-ethical-dilemma\" target=\"_blank\">use of embryonic stem cells</a>, researchers are likely to face many obstacles when developing stem cell-based therapy.&nbsp;&nbsp;</p>" +
+            48),
+        getAnnotation("Immunotherapy", 1979,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Artificial%20Intelligence.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
+            55),
+    ],
+    fda: [
+        getAnnotation("Law Requiring Ingredient List and Prohibiting False Claims", 1906,
+            "Pure Food and Drugs Act - While the AMA Council on Pharmacy and Chemistry held out a carrot of certification to ethical\n" +
+            "drug products that met their standards, the first federal food and drug statute, the 1906 Pure Food\n" +
+            "and Drugs Act, wielded little in the way of a stick. The AMA had been unsuccessful in getting\n" +
+            "any kind of drug review in the new law and the statute merely provided a legal definition for the\n" +
+            "terms \"adulterated\" and \"misbranded\" as they related to both food and drug products and\n" +
+            "prescribed legal penalties for each offense. The law did empower the Bureau of Chemistry\n" +
+            "(forerunner of the U.S. Food and Drug Administration) to seize adulterated and misbranded\n" +
+            "products that moved in interstate commerce, but it simply adopted the drug standards as \n" +
+            "U.S. Food and Drug Administration\n" +
+            "www.fda.gov\n" +
+            "published in the U.S. Pharmacopeia and the National Formulary. The law also prohibited \"false\n" +
+            "and misleading\" statements on product labels. In the case of drugs, the law listed eleven so-called\n" +
+            "\"dangerous ingredients\" including opium (and its derivatives) and alcohol which, if they were\n" +
+            "present in the product, had to be listed on the drug label. This listing requirement alone inspired\n" +
+            "many manufacturers to abandon use of many dangerous ingredients following passage of the\n" +
+            "1906 Act. But efforts to prohibit false therapeutic claims on drug labels were defeated both by\n" +
+            "the Supreme Court and the U.S. Congress. ",
+            36),
+        getAnnotation("New Treatments Require Trials for Safety and FDA Approval", 1938,
+            "\"Instead of going to market based on their own assessment of the drug, sponsors had to\n" +
+            "notify the FDA of their intent to market the drug by submitting an NDA (New Drug\n" +
+            "Application),\" explains Dr. Robert Temple, currently head of FDA's Office of Medical Policy.\n" +
+            "Although the new law did not specify any particular testing method(s), the law did require that\n" +
+            "drugs be studied by \"adequate tests by all methods reasonably applicable to show whether or not\n" +
+            "the drug is safe.\"Sponsors were required to demonstrate to FDA that they had carried out all\n" +
+            "reasonably applicable studies to demonstrate safety and that the drug was \"safe for use under the\n" +
+            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 45),
+    ]
+};
 function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotations, seriesAndAxes){
     if(!seriesAndAxes){
-        seriesAndAxes = [series.lifeExpectancy, series.gdp, series.books, series.democracy];
+        seriesAndAxes = [series.globalLifeExpectancy, series.gdp, series.books, series.democracy];
     }
     var allSeries = [];
     var allY = [];
+    var lifeAxis = null;
     seriesAndAxes = JSON.parse(JSON.stringify(seriesAndAxes));
     for (var i = 0; i < seriesAndAxes.length; i++){
         var oneSeries = seriesAndAxes[i].series;
-        oneSeries.yAxis = i;
+        if(typeof oneSeries.yAxis === "undefined"){
+            oneSeries.yAxis = i;
+        }
+        // if(oneSeries.name.indexOf('Life') !== -1){
+        //     if(lifeAxis !== null){lifeAxis = i;}
+        //     oneSeries.yAxis = lifeAxis;
+        // }
         oneSeries.showInLegend = true;
         allSeries.push(oneSeries);
     }
+    lifeAxis = null;
     for (i = 0; i < seriesAndAxes.length; i++){
         var oneAxis = seriesAndAxes[i].yAxis;
         oneSeries = allSeries[i];
@@ -933,7 +1644,7 @@ function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotati
     };
     return config;
 }
-series.lifeExpectancy.series.visible = true;
+series.globalLifeExpectancy.series.visible = true;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = false;
@@ -945,7 +1656,7 @@ Highcharts.stockChart('long-term-container', getConfig(
     1999,
     'Using linear time-scale to illustrate the magnitude of improvement over such a short period of time',
     []));
-series.lifeExpectancy.series.visible = false;
+series.globalLifeExpectancy.series.visible = false;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = false;
@@ -957,7 +1668,7 @@ Highcharts.stockChart('gdp-start-container',
         1999,
         'Using logarithmic to more easily identify the initial trigger for the explosions of wealth and health',
         []));
-series.lifeExpectancy.series.visible = true;
+series.globalLifeExpectancy.series.visible = true;
 series.books.series.visible = true;
 series.gdp.series.visible = true;
 series.democracy.series.visible = true;
@@ -970,8 +1681,8 @@ Highcharts.stockChart('gdp-annotations-container',
         'The advent of the printing press allowed the brains of geniuses to improve the brains of millions of ' +
         'crappier brains through the transmission of ideas.  The scientific method became widely adopted, allowing ' +
         'empiricism to displace gut intuition in all efforts to improve the human condition. ',
-        generalEvents));
-series.lifeExpectancy.series.visible = true;
+        events.general));
+series.globalLifeExpectancy.series.visible = true;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = true;
@@ -986,16 +1697,42 @@ Highcharts.stockChart('gdp-end-container',
         'The advent of the printing press allowed the brains of geniuses to improve the brains of millions of ' +
         'crappier brains through the transmission of ideas.  The scientific method became widely adopted, allowing ' +
         'empiricism to displace gut intuition in all efforts to improve the human condition. ',
-        generalEvents));
-series.lifeExpectancy.series.visible = true;
+        events.general));
+series.globalLifeExpectancy.series.visible = true;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = true;
 Highcharts.stockChart('life-expectancy-annotations-container',
-    getConfig('logarithmic',
+    getConfig(
+        'linear',
+        //'logarithmic',
         true,
         'Events Leading to the Health Explosion',
         1775,
         2000,
         'It appears that the discovery of cells and germs were the primary discoveries preceding the explosion in human lifespan.',
-        healthEvents));
+        events.health,
+        [
+            series.ama,
+            series.globalLifeExpectancy
+        ]
+    )
+);
+Highcharts.stockChart('us-life-expectancy-ama-container',
+    getConfig(
+        'linear',
+        //'logarithmic',
+        false,
+        'US Life-Expectancy and the American Medical Association',
+        1775,
+        2000,
+        'It appears that the discovery of cells and germs were the primary discoveries preceding the explosion in human lifespan.',
+        events.health,
+        [
+            series.USLifeExpectancy,
+            series.newDrugs,
+            series.SwissLifeExpectancy,
+            series.ama,
+        ]
+    )
+);
