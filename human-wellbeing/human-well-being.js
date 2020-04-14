@@ -39,11 +39,19 @@ var series = {
             color: colors.blue,
             visible: true,
             data: [
-                // [1944, 137],
-                // [1945, 132],
-                // [1946, 114],
-                // [1947, 145],
-                // [1948, 194],
+                //[1820, 217], // http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf
+                //[1900, 360],
+                [1938, 594],
+                [1939, 594],
+                [1940, 594],
+                [1941, 807],
+                [1942, 514],
+                [1943, 514],
+                [1944, 137],
+                [1945, 132],
+                [1946, 114],
+                [1947, 145],
+                [1948, 194],
                 [1949, 360],
                 [1950, 233],
                 [1951, 256],
@@ -1307,7 +1315,24 @@ var events = {
             "       for determining purity. Leading pharmacists regularly revised the\n" +
             "        <a href=\"https://www.fdareview.org/features/glossary/#usp\"><i>USP</i></a>\n" +
             "       as new and better drugs, compositions, and tests were discovered and created. \n" +
+            "<a href=\"http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf\"><i>USP</i></a>"+
             "    </p>", 29),
+        getAnnotation("Philadelphia College of Pharmacy", 1821,
+            "Soon after the USP appeared, a group of druggists and\n" +
+            "apothecaries, gathered in Philadelphia, founded the\n" +
+            "Philadelphia College of Pharmacy, the first local pharmacy organization in the United States. ", 29),
+        getAnnotation("American Journal of Pharmacy,", 1821,
+            "Leafing through its\n" +
+            "pages, we see what most\n" +
+            "of us might expect looking back 177 years: articles on the art of pharmacy, that is, how to take\n" +
+            "basic ingredients and combine them into dosage\n" +
+            "forms of medicine. We\n" +
+            "would not be surprised to\n" +
+            "find pieces on the topic of\n" +
+            "materia medica: that is, the\n" +
+            "sources of drugs, their form\n" +
+            "and function, and medicinal\n" +
+            "activities. - http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 29),
         getAnnotation("Cells", 1838,
             "<p>" +
             "In 1838 Matthias Jakob Shleiden discovers that all plants are made of cells and, within the same year, " +
@@ -1327,15 +1352,26 @@ var events = {
             "The Department of Investigation (1913-1975) gathered and disseminated health fraud and quackery information" +
             " for the public for over 60 years",
             29),
-        getAnnotation("Medical Imaging", 1895,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>" +
-            "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
-            "\n" +
-            "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
-            "\n" +
-            "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
-            "</p>", 34),
+        getAnnotation("Retail Pharmacy Sector Exploded", 1860,
+            "During the 1850s as\n" +
+            "the retail pharmacy sector exploded. While the per capita\n" +
+            "number of physicians stayed steady, the number of drugstores increased by nearly 25%. And many, if not most,\n" +
+            "of these were run by “mere shopkeepers.” ",
+            29),
+        getAnnotation("Growth in Number of Schools of Pharmacy", 1880,
+            "An influx of new state-affiliated pharmacy schools in the 1880s and 1890s helped to raise the\n" +
+            "level the practice significantly. Many like the University of Wisconsin combined laboratory science with an\n" +
+            "experiential requirement for graduation. - http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf",
+            29),
+        getAnnotation("Industrial Pharmaceutical Manufacturing", 1895,
+            "Large-scale manufacturers took\n" +
+            "over the making of not only ingredients and preparations but entered the field of end dosage forms. The\n" +
+            "corner pharmacist could not match the elegance of the\n" +
+            "modern sugar-coated pills or the low price of the machine-made tablets that appeared at century’s end. By\n" +
+            "1900, one young woman in a factory could operate a\n" +
+            "pair of machines punching out 100,000 headache tablets a day. Compounding, the crux of professional " +
+            "practice in the late nineteenth century, started its great decline. " +
+            "- http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 34),
         getAnnotation("Anesthesia", 1846,
             "<p>" +
             "Before the first use of a general anaesthetic in the mid-19th century, surgery was undertaken only as a last resort, with several patients opting for death rather than enduring the excruciating ordeal. Although there were countless earlier experiments with anaesthesia dating as far back to 4000 BC – William T. G. Morton made history in 1846 when he successfully used ether as an anaesthetic during surgery. Soon after, a faster-acting substance called chloroform became widely used, but was considered high-risk after several fatalities were reported. Over the 150 years since, safer anaesthetics have been developed, allowing millions of life-saving, painless operations to take place." +
@@ -1356,6 +1392,15 @@ var events = {
         getAnnotation("Journal of the American Medical Association", 1883,
             "Journal of the American Medical Association is first published; Nathan Davis is first editor. ",
             30),
+        getAnnotation("Medical Imaging", 1895,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
+            "\n" +
+            "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
+            "\n" +
+            "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
+            "</p>", 34),
         getAnnotation("Council on Pharmacy and Chemistry", 1905,
             "The American Medical Association (AMA) began to push for federal evaluation of new medical\n" +
             "products hoping to make a dent in the patent medicine industry, but it was unsuccessful. In 1905,\n" +
@@ -1526,8 +1571,8 @@ var events = {
             "many manufacturers to abandon use of many dangerous ingredients following passage of the\n" +
             "1906 Act. But efforts to prohibit false therapeutic claims on drug labels were defeated both by\n" +
             "the Supreme Court and the U.S. Congress. ",
-            36),
-        getAnnotation("New Treatments Require Trials for Safety and FDA Approval", 1938,
+            45),
+        getAnnotation("FDA Requires Safety Trials", 1938,
             "\"Instead of going to market based on their own assessment of the drug, sponsors had to\n" +
             "notify the FDA of their intent to market the drug by submitting an NDA (New Drug\n" +
             "Application),\" explains Dr. Robert Temple, currently head of FDA's Office of Medical Policy.\n" +
@@ -1535,7 +1580,21 @@ var events = {
             "drugs be studied by \"adequate tests by all methods reasonably applicable to show whether or not\n" +
             "the drug is safe.\"Sponsors were required to demonstrate to FDA that they had carried out all\n" +
             "reasonably applicable studies to demonstrate safety and that the drug was \"safe for use under the\n" +
-            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 45),
+            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 55),
+        getAnnotation("FDA Requires Efficacy Trials", 1962,
+            "FDA Requires Trials Proving a Drug is Effective Before Anyone Can Buy It - " +
+            "The Drug Efficacy Amendment, this amendment was signed into law in 1962 required manufacturers \n" +
+            "to provide proof of effectiveness of their drugs prior to approval.", 60),
+    ],
+    drugs: [
+        getAnnotation("Pfizer Pharmaceuticals Founded", 1849 ,
+            "Meanwhile in the USA, Pfizer was founded in 1849 by two German immigrants, initially as a fine" +
+            " chemicals business. Their business expanded rapidly during the American civil war as demand for " +
+            "painkillers and antiseptics rocketed³.", 45),
+        getAnnotation("Bayer Pharmaceuticals Founded", 1849 ,
+            "<div id=\"attachment_24716\" style=\"width: 310px\" class=\"wp-caption alignnone\"><img aria-describedby=\"caption-attachment-24716\" class=\"wp-image-24716\" src=\"https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin-180x180.png\" alt=\"demand-aspirin\" width=\"300\" height=\"300\" srcset=\"https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin-180x180.png 180w, https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin-300x300.png 300w, https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin-100x100.png 100w, https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin-90x90.png 90w, https://pharmaphorum.com/wp-content/uploads/2010/10/Demand-Aspirin.png 365w\" sizes=\"(max-width: 300px) 100vw, 300px\"><p id=\"caption-attachment-24716\" class=\"wp-caption-text\">An advert for Bayer’s Aspirin from the early 20th century</p></div>" +
+            "<p>Bayer was founded in 1863 as a dye maker in Wuppertal, the hometown of Karl Marx’s collaborator Friedrich Engels. It later moved into medicines, commercialising aspirin around the turn of the 20th century, one of the most successful pharmaceuticals ever at that point.</p>",
+            45),
     ]
 };
 function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotations, seriesAndAxes){
@@ -1615,7 +1674,7 @@ function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotati
         },
         plotOptions: {
             series: {
-                connectNulls: true
+                connectNulls: false
             }
         },
         annotations: annotations,
@@ -1733,6 +1792,24 @@ Highcharts.stockChart('us-life-expectancy-ama-container',
             series.newDrugs,
             series.SwissLifeExpectancy,
             series.ama,
+        ]
+    )
+);
+Highcharts.stockChart('fda-container',
+    getConfig(
+        'linear',
+        //'logarithmic',
+        false,
+        'The FDA and Life-Expectancy',
+        1890,
+        2000,
+        'It appears that the discovery of cells and germs were the primary discoveries preceding the explosion in human lifespan.',
+        events.fda,
+        [
+            series.USLifeExpectancy,
+            series.newDrugs,
+            series.SwissLifeExpectancy,
+            //series.ama,
         ]
     )
 );
