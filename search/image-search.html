@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" id="googleicon-cdn-css" href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;ver=5.4" type="text/css" media="all">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="https://static.quantimo.do/data/png-images.js"></script>
+</head>
+<body>
+<style>
+    .fluentProgressBar-normal {
+        background-color: #0078d4;
+        height: 4px;
+    }
+    .fluentProgressBar-waiting {
+        background: rgba(0,120,212,0);
+        background: -moz-linear-gradient(left, rgba(0,120,212,0) 0%, rgba(0,120,212,1) 51%, rgba(0,120,212,0) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,120,212,0)), color-stop(51%, rgba(0,120,212,1)), color-stop(100%, rgba(0,120,212,0)));
+        background: -webkit-linear-gradient(left, rgba(0,120,212,0) 0%, rgba(0,120,212,1) 51%, rgba(0,120,212,0) 100%);
+        background: -o-linear-gradient(left, rgba(0,120,212,0) 0%, rgba(0,120,212,1) 51%, rgba(0,120,212,0) 100%);
+        background: -ms-linear-gradient(left, rgba(0,120,212,0) 0%, rgba(0,120,212,1) 51%, rgba(0,120,212,0) 100%);
+        background: linear-gradient(to right, rgba(0,120,212,0) 0%, rgba(0,120,212,1) 51%, rgba(0,120,212,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078d4', endColorstr='#0078d4', GradientType=1 );
+        height: 4px;
+        -webkit-animation: progressBarAnimation 2s linear infinite;
+        animation: progressBarAnimation 2s linear infinite;
+    }
+    @keyframes progressBarAnimation {
+        0% {
+            left: -50%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+</style>
+<div class="z-20 mt-20 md:mt-16 lg:mt-6 flex items-center gradient">
+    <div class="flex flex-col w-full justify-center items-center pt-6 sm:pt-16">
+        <!--Search-->
+        <div class=" w-full mx-auto mt-2">
+            <div class="relative max-w-3xl mx-auto px-6">
+                <label for="search-toggle"></label>
+                <div class="p-8">
+                    <div class="bg-white flex items-center rounded-full shadow-xl border border-gray-300 "
+                         style="border-style: solid;
+                                border-width: 1px;
+                                border-color: #d3d3d3;">
+                        <input class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"
+                               id="search-toggle"
+                               type="search"
+                               placeholder="What do you want to optimize?"
+                               onkeyup="updateSearchResults(this.value);"
+                               >
+                        <div class="p-4">
+                            <button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+                                <svg class="h-4 w-4 fill-current text-gray-600" style="color: white;"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="progress-bar" class="w-full">
+                <!-- Waiting... -->
+                <div class="w-full overflow-hidden">
+                    <div class="w-1/2 inline-block relative fluentProgressBar-waiting"></div>
+                </div>
+            </div>
+                <div class="mt-1">
+                    <div id="search-content"
+                         class="z-50 w-full text text-gray-600 rounded-lg overflow-y-auto bg-white shadow-lg">
+                        <div id="searchresults" class="h-auto max-w-3xl mx-auto">
+                            <!-- No search results message-->
+                            <div id="nosearchresults" class="hidden flex pb-6 px-6 bg-white">
+                                <svg class="fill-current text-indigo-600 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+                                </svg>
+                                <span class="ml-4 font-bold"> Oops, no search results!!!1</span>
+                            </div>
+                            <!-- / No search results -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Search-->
+    </div>
+</div>
+<script src="image-search.js"></script>
+</body>
+</html>
