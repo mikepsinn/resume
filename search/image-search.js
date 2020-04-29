@@ -61,9 +61,11 @@ function showProgressBar() {
     }
 }
 function hideProgressBar() {
-    if (!progressBar.classList.contains("hidden")) {
-        progressBar.classList.add("hidden");
-    }
+    setTimeout(function () {
+        if (!progressBar.classList.contains("hidden")) {
+            progressBar.classList.add("hidden");
+        }
+    }, 1000)
 }
 
 function togglePanel() {
@@ -123,7 +125,9 @@ function updateSearchResults(value) {
     if(value){
         result = fuse.search(value);
     }
-
+    function generateIconSearchItem(one) {
+        return '<img class="md:block h-16 border-none" style="display: inline-block; padding: 5px;" src="' + one.url + '" title="'+one.name+' - '+one.category+'">';
+    }
     function generateLineSearchItem(one) {
         let searchitem = '<span class="p-4 border-b flex justify-between items-center group hover:bg-teal-100">' +
             '<a class="block flex-1 no-underline" href="' + one.url + '">' +
@@ -168,20 +172,25 @@ function updateSearchResults(value) {
             searchMenuDiv.classList.remove("bg-white");
             searchMenuDiv.classList.remove("shadow-lg")
         } else {
-            clearSearchResults()
+            //clearSearchResults()
         }
     } else {
         resultdiv.innerHTML = "";
         noresultdiv.classList.add("hidden");
         searchMenuDiv.classList.add("bg-white");
-        searchMenuDiv.classList.add("shadow-lg");
-        let maxLength = 20;
+        //searchMenuDiv.classList.add("shadow-lg");
+        let maxLength = 100;
         let toShow = result.slice(0, maxLength);
+        let imagesHtml = "";
         for (let key in toShow) {
             let one = result[key].item || result[key];
-            let searchitem = generateLineSearchItem(one);
+            //let searchitem = generateLineSearchItem(one);
+            let searchitem = generateIconSearchItem(one);
             //let searchitem = imageCard(one);
-            resultdiv.innerHTML += searchitem
+            imagesHtml += searchitem
+        }
+        if(imagesHtml !== ""){
+            resultdiv.innerHTML = imagesHtml
         }
         resultdiv.style.display = ""
     }
