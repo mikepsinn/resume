@@ -30,8 +30,6 @@ function check(e) {
     if (!checkParent(target, searchMenuDiv)) {
         if (checkParent(target, searchField)) {
             togglePanel()
-        } else {
-            minSearchResults()
         }
     }
 }
@@ -44,15 +42,6 @@ function checkParent(t, elm) {
         t = t.parentNode
     }
     return false
-}
-
-function toggleSearch() {
-    if (searchContainer.classList.contains("hidden")) {
-        searchContainer.classList.remove("hidden");
-        searchField.focus()
-    } else {
-        searchContainer.classList.add("hidden")
-    }
 }
 
 function showProgressBar() {
@@ -101,13 +90,11 @@ document.onkeydown = function (evt) {
         searchField.blur();
         togglePanel()
     }
-    if (isTab && searchField === document.activeElement) {
-        minSearchResults()
-    }
 }
 ;
 
 function clearSearchResults() {
+  
     resultdiv.innerHTML = ""
 }
 
@@ -206,34 +193,6 @@ searchField.addEventListener("search", function (event) {
         }
     }
 });
-
-function filterTemplates(filterVal) {
-    var divs = document.querySelectorAll("[data-twcat]");
-    for (var i = 0; i < divs.length; ++i) {
-        if (divs[i].dataset.twcat.indexOf(filterVal) >= 0) {
-            divs[i].style.display = "block"
-        } else {
-            divs[i].style.display = "none"
-        }
-    }
-    if (filterVal == "")
-        filterVal = "all";
-    var btns = document.querySelectorAll("[data-twfilter]");
-    var filterMsg = document.getElementById("filterMsg");
-    for (var i = 0; i < btns.length; ++i) {
-        if (btns[i].dataset.twfilter == filterVal) {
-            btns[i].classList.add("active-tab")
-        } else {
-            btns[i].classList.remove("active-tab")
-        }
-    }
-    if (filterVal == "all") {
-        filterMsg.classList.add("hidden")
-    } else {
-        filterMsg.classList.remove("hidden");
-        filterMsg.innerHTML = "Showing: " + filterVal + " templates - Click here to show all templates!"
-    }
-}
 
 function calcIframeHeight(offset) {
     var the_height = document.getElementById("iframecontent").contentWindow.document.body.scrollHeight;
