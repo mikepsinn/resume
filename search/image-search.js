@@ -24,7 +24,6 @@ var srcUrl = document.getElementById("srcUrl");
 var srcAuthor = document.getElementById("srcAuthor");
 var progressBar = document.getElementById("progress-bar");
 document.onclick = check;
-
 function check(e) {
     var target = e && e.target || event && event.srcElement;
     if (!checkParent(target, searchMenuDiv)) {
@@ -33,7 +32,6 @@ function check(e) {
         }
     }
 }
-
 function checkParent(t, elm) {
     while (t.parentNode) {
         if (t == elm) {
@@ -43,7 +41,6 @@ function checkParent(t, elm) {
     }
     return false
 }
-
 function showProgressBar() {
     if (progressBar.classList.contains("hidden")) {
         progressBar.classList.remove("hidden");
@@ -56,7 +53,6 @@ function hideProgressBar() {
         }
     }, 1000)
 }
-
 function togglePanel() {
     if (searchField.value === "") {
         //clearSearchResults()
@@ -64,7 +60,6 @@ function togglePanel() {
         resultdiv.classList.remove("hidden")
     }
 }
-
 document.onkeydown = function (evt) {
     showProgressBar();
     evt = evt || window.event;
@@ -92,28 +87,22 @@ document.onkeydown = function (evt) {
     }
 }
 ;
-
 function clearSearchResults() {
-  
     resultdiv.innerHTML = ""
 }
-
-function minSearchResults() {
-    if (resultdiv.innerHTML != "") {
-        resultdiv.classList.add("hidden")
-    } else {
-        resultdiv.classList.remove("hidden")
-    }
-}
-
 function updateSearchResults(value) {
-
     let result = sourceData;
     if(value){
         result = fuse.search(value);
     }
     function generateIconSearchItem(one) {
-        return '<img class="md:block h-16 border-none" style="display: inline-block; padding: 5px;" src="' + one.url + '" title="'+one.name+' - '+one.category+'">';
+        return '<img id="'+one.name+'" class="md:block h-16 border-none" ' +
+            'style="display: inline-block; padding: 5px; cursor: pointer;" ' +
+            'src="' + one.url + '" ' +
+            'data-clipboard-text="'+one.url+'" '+
+            'title="'+one.name+' - '+one.category+'">' +
+            '';
+
     }
     function generateLineSearchItem(one) {
         let searchitem = '<span class="p-4 border-b flex justify-between items-center group hover:bg-teal-100">' +
@@ -151,7 +140,6 @@ function updateSearchResults(value) {
             '</div>'
         return searchitem;
     }
-
     if (result.length === 0) {
         if (value != "") {
             //clearSearchResults();
@@ -179,11 +167,44 @@ function updateSearchResults(value) {
         if(imagesHtml !== ""){
             resultdiv.innerHTML = imagesHtml
         }
+        for (let key in toShow) {
+            let one = result[key].item || result[key];
+            var clipboard = new ClipboardJS('#'+one.name);
+
+            clipboard.on('success', function(e) {
+                console.info('Action:', e.action);
+                console.info('Text:', e.text);
+                console.info('Trigger:', e.trigger);
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    //position: 'top',
+                    showConfirmButton: false,
+                    timer: 10000,
+                    timerProgressBar: true,
+                    showCloseButton: true,
+                    onOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Copied '+one.url+" to clipboard!"
+                })
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function(e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+        }
         resultdiv.style.display = ""
     }
     hideProgressBar();
 }
-
 searchField.addEventListener("search", function (event) {
     if (event.type === "search") {
         if (event.currentTarget.value == "") {
@@ -193,30 +214,25 @@ searchField.addEventListener("search", function (event) {
         }
     }
 });
-
 function calcIframeHeight(offset) {
     var the_height = document.getElementById("iframecontent").contentWindow.document.body.scrollHeight;
     document.getElementById("iframecontent").height = the_height + offset
 }
-
 function goMobile() {
     document.getElementById("device").classList.add("w-1/3");
     document.getElementById("device").classList.remove("w-full");
     document.getElementById("device").classList.remove("w-2/3")
 }
-
 function goTablet() {
     document.getElementById("device").classList.add("w-2/3");
     document.getElementById("device").classList.remove("w-full");
     document.getElementById("device").classList.remove("w-1/3")
 }
-
 function goDesktop() {
     document.getElementById("device").classList.add("w-full");
     document.getElementById("device").classList.remove("w-1/3");
     document.getElementById("device").classList.remove("w-2/3")
 }
-
 function clearSelection() {
     if (window.getSelection) {
         window.getSelection().removeAllRanges()
@@ -224,7 +240,6 @@ function clearSelection() {
         document.selection.empty()
     }
 }
-
 function copyClipboard() {
     var elm = document.getElementById("code");
     if (document.body.createTextRange) {
@@ -256,4 +271,3 @@ const urlParams = new URLSearchParams(queryString);
 const query = urlParams.get('q')
 console.log(query);
 updateSearchResults(query);
-
