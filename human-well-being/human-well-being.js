@@ -1674,7 +1674,7 @@ function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotati
         },
         plotOptions: {
             series: {
-                connectNulls: false
+                connectNulls: true
             }
         },
         annotations: annotations,
