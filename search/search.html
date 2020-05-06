@@ -16,6 +16,7 @@
     <!--    <script src="https://static.quantimo.do/data/png-images.js"></script>-->
     <script src="https://static.quantimo.do/data/svg-images.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 </head>
 <body>
 
@@ -58,13 +59,13 @@
         <div style="text-align: left;">
             <div>
                 <div x-data="{
-                  openTab: 'images-tab',
+                  openTab: 'svg-tab',
                   activeClasses: 'border-l border-t border-r rounded-t text-blue-700',
                   inactiveClasses: 'text-blue-500 hover:text-blue-800'
                 }" class="p-6">
                     <ul class="flex border-b">
-                        <li @click="openTab = 'images-tab'" :class="{ '-mb-px': openTab === 'images-tab' }" class="-mb-px mr-1">
-                            <a :class="openTab === 'images-tab' ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold" href="#">
+                        <li @click="openTab = 'svg-tab'" :class="{ '-mb-px': openTab === 'svg-tab' }" class="-mb-px mr-1">
+                            <a :class="openTab === 'svg-tab' ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold" href="#">
                                 Images
                             </a>
                         </li>
@@ -78,11 +79,11 @@
                         </li>
                     </ul>
                     <div class="w-full pt-4">
-                        <div x-show="openTab === 'images-tab'">
+                        <div x-show="openTab === 'svg-tab'">
                             <div class="mt-1">
                                 <div id="search-content"
                                      class="z-50 w-full text text-gray-600 rounded-lg overflow-y-auto bg-white">
-                                    <div id="searchresults" class="h-auto max-w-3xl mx-auto" x-show="openTab === 'images-tab'">
+                                    <div id="searchresults" class="h-auto max-w-3xl mx-auto" x-show="openTab === 'svg-tab'">
                                         <!-- No search results message-->
                                         <div id="nosearchresults" class="hidden flex pb-6 px-6 bg-white">
                                             <svg class="fill-current text-indigo-600 h-6 w-6"
