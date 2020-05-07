@@ -1,13 +1,3 @@
-var options = {
-    shouldSort: true,
-    tokenize: true,
-    threshold: .8,
-    location: 0,
-    distance: 40,
-    maxPatternLength: 32,
-    minMatchCharLength: 2,
-    keys: ["name", "category"]
-};
 var searchMenuDiv = document.getElementById("search-content");
 var searchField = document.getElementById("search-toggle");
 let resultdiv = document.getElementById("searchresults");
@@ -66,7 +56,8 @@ document.onkeydown = function (evt) {
         isSlash = evt.keyCode === 191 || evt.keyCode === 111;
         isEscape = evt.keyCode === 27;
     }
-    if (isSlash && searchField != document.activeElement && srcTitle != document.activeElement && srcDesc != document.activeElement && srcUrl != document.activeElement && srcAuthor != document.activeElement) {
+    if (isSlash && searchField != document.activeElement && srcTitle != document.activeElement &&
+        srcDesc != document.activeElement && srcUrl != document.activeElement && srcAuthor != document.activeElement) {
         evt.preventDefault();
         searchField.focus();
         togglePanel()
@@ -75,29 +66,57 @@ document.onkeydown = function (evt) {
         searchField.blur();
         togglePanel()
     }
-}
-;
+};
 function clearSearchResults() {
     resultdiv.innerHTML = ""
 }
+var searchCache = {};
+function search(query) {
+    console.log(query);
+    showProgressBar();
+    function successHandler(results){
+        hideProgressBar();
+        updateSearchResults(results);
+    }
+    var useV6 = true;
+    if(useV6){
+        if(typeof searchCache[query] === "undefined"){
+            variableSearchV6(query)
+            searchCache[query] = [];
+        } else{
+            successHandler(searchCache[query])
+        }
+    }else{
+        qm.variablesHelper.getFromLocalStorageOrApi({searchPhrase: query}, successHandler)
+    }
+}
+function variableSearchV6(query) {
+    let url = 'https://local.quantimo.do/api/v6/variables?q='+query;
+    fetch(url, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(response => response.json())
+        .then(body => updateSearchResults(body.data));
+}
 function updateSearchResults(result) {
+    searchCache[query] = result;
     function generateLineSearchItem(one) {
         var url = "https://app.quantimo.do/admin/variables/"+one.id;
-        let searchitem = '<span class="p-4 border-b flex justify-between items-center group hover:bg-teal-100">' +
-            '<a class="block flex-1 no-underline" href="' + url + '" target="_blank">' +
-            '<p class="font-bold text-sm text-indigo-600 hover:text-indigo-500">' +
-            '<span class="mr-2 text-teal-500">' + one.displayName + "</span>" +
-            '<span class="text-indigo-300 font-normal"> category ' + one.variableCategoryName +
-            '<svg class="inline-block pl-2  h-4 fill-current text-brand" ' +
-            'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.26 13a2 2 0 0 1 .01-2.01A3 3 0 0 0 9 5H5a3 3 0 0 0 0 6h.08a6.06 6.06 0 0 0 0 2H5A5 5 0 0 1 5 3h4a5 5 0 0 1 .26 10zm1.48-6a2 2 0 0 1-.01 2.01A3 3 0 0 0 11 15h4a3 3 0 0 0 0-6h-.08a6.06 6.06 0 0 0 0-2H15a5 5 0 0 1 0 10h-4a5 5 0 0 1-.26-10z"/></svg>' +
-            '</span>' +
-            '</p>' +
-            '<p class="md:block text-xs text-teal-600">' + url + '</p>' +
-            //'<p class="text-sm py-1">' + one.category + '</p>' +
-            '</a>' +
-            '<a href="' + url + '">' +
-            '<img class="md:block h-16 border-none" src="' + one.imageUrl + '" alt="">' +
-            '</a>' +
+        var linkIcon = '<svg class="inline-block pl-2  h-4 fill-current text-brand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.26 13a2 2 0 0 1 .01-2.01A3 3 0 0 0 9 5H5a3 3 0 0 0 0 6h.08a6.06 6.06 0 0 0 0 2H5A5 5 0 0 1 5 3h4a5 5 0 0 1 .26 10zm1.48-6a2 2 0 0 1-.01 2.01A3 3 0 0 0 11 15h4a3 3 0 0 0 0-6h-.08a6.06 6.06 0 0 0 0-2H15a5 5 0 0 1 0 10h-4a5 5 0 0 1-.26-10z"/></svg>';
+        let searchitem =
+            '<span class="p-4 border-b flex justify-between items-center group hover:bg-teal-100">' +
+                '<a class="block flex-1 no-underline" href="' + url + '" target="_blank">' +
+                    '<p class="font-bold text-sm text-indigo-600 hover:text-indigo-500">' +
+                        '<span class="mr-2 text-teal-500">' + one.displayName + "</span>" +
+                        '<span class="text-indigo-300 font-normal">' + one.variableCategoryName + linkIcon + '</span>' +
+                    '</p>' +
+                    '<p class="md:block text-xs text-teal-600">' + url + '</p>' +
+                    //'<p class="text-sm py-1">' + one.category + '</p>' +
+                '</a>' +
+                '<a href="' + url + '">' +
+                    '<img class="md:block h-16 border-none" src="' + one.imageUrl + '" alt="">' +
+                '</a>' +
             '</span>';
         return searchitem;
     }
@@ -120,7 +139,7 @@ function updateSearchResults(result) {
         return searchitem;
     }
     if (result.length === 0) {
-        if (value != "") {
+        if (query != "") {
             //clearSearchResults();
             noresultdiv.classList.remove("hidden");
             searchMenuDiv.classList.remove("bg-white");
@@ -212,7 +231,4 @@ function copyClipboard() {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const query = urlParams.get('q')
-console.log(query);
-qm.variablesHelper.getFromLocalStorageOrApi({searchPhrase: query}, function(results){
-    updateSearchResults(results);
-})
+search(query)
