@@ -1,6 +1,8 @@
 ---
 title: Mike P. Sinn
 timezone: UTC
+port: 4003
+livereload: true
 collections:
   posts:
     title: Posts

@@ -11,6 +11,7 @@ categories:
 modal-id: 22
 img: think-by-numbers.png
 alt: think-by-numbers
+project-date: 2006 - Present
 project-name: Think by Numbers
 project-url: https://thinkbynumbers.org
 description: I created Think by Numbers where I use statistical analysis and entertaining
