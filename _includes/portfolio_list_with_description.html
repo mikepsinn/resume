@@ -45,9 +45,8 @@
 <!--                                <p>Check it out at</p>-->
                                 <button type="button" class="btn btn-lg btn-primary"
                                     onclick="window.open('{{ post.project-url }}', '_blank');" target="_blank">
-                                    <i class="fa fa-eye"></i> &nbsp; {{ post.project-name }}
+                                    <i class="fa fa-eye"></i> &nbsp; {{ post.project-url }}
                                 </button>
-                                <!--<h3><a href="{{ post.project-url }}" target="_blank">{{ post.project-name }}</a></h3>-->
                             {% endif %}
                             <ul class="list-inline item-details">
                                 {% if post.project-date %}
@@ -58,7 +57,7 @@
                                 {% endif %}
                             </ul>
                             {% if post.categories %}
-                                <h3>Skills</h3>
+                                <h3>Skills Involved</h3>
                                 {% for skill in post.categories %}
                                 <strong>{{ skill }}</strong><br>
                                 {% endfor %}

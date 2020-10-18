@@ -1,56 +1,52 @@
 ---
-title: Mike P. Sinn
-timezone: UTC
-port: 4003
-livereload: true
+address:
+  - line: '601 Hillsboro Ave, Apt B'
+  - line: 'Edwardsville, IL 62025'
+bing_verify: null
 collections:
   posts:
+    output: true
     title: Posts
-    output: true
   uploads:
-    title: Uploads
     output: true
-email: mike@quantimo.do
-url: https://mikesinn.com
-description: Web Development - Data Science - Mobile Development
-skills: Web Development - Data Science - Mobile Development
-meta_author: Sinn Mike
-keywords: quantimodo, think by numbers, web development, business intelligence
-google_verify:
-bing_verify:
-contact: static
-disqus_shortname: mikepsinn
+    title: Uploads
 color:
   primary: 18bc9c
   primary-rgb: '24,288,156'
   secondary: 2c3e50
   secondary-dark: 233140
+contact: static
+credits: '<a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a> <br> <a href="http://startbootstrap.com">Start Bootstrap</a>'
+description: Web Development - Data Science - Mobile Development
+disqus_shortname: mikepsinn
+email: m@thinkbynumbers.org
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - .idea
 footer:
   copyright: Mike P. Sinn
+  credits: Credits
   location: Location
   social: Around the Web
-  credits: Credits
-social:
-- title: twitter
-  url: http://twitter.com/thinkbynumbers
-- title: facebook
-  url: https://www.facebook.com/mikepsinn
-# - title: stack-overflow
-#   url: http://stackoverflow.com/users/3785491/mikepsinn
-- title: github
-  url: http://github.com/mikepsinn
-- title: linkedin
-  url: https://www.linkedin.com/in/mikesinn/
-# - title: bitbucket
-#   url: http://bitbucket.com/mikepsinn
-address:
-- line: 601 Hillsboro Ave, Apt B
-- line: Edwardsville, IL 62025
-credits: <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a>
-  <br> <a href="http://startbootstrap.com">Start Bootstrap</a>
+google_verify: null
+keywords: 'quantimodo, think by numbers, web development, business intelligence'
+livereload: true
 markdown: kramdown
+meta_author: Sinn Mike
 permalink: pretty
-exclude:
-- Gemfile.lock
-- node_modules
-- ".idea"
+phone: 618-391-0002
+port: 4003
+skills: Web Development - Data Science - Mobile Development
+social:
+  - title: twitter
+    url: 'http://twitter.com/thinkbynumbers'
+  - title: facebook
+    url: 'https://www.facebook.com/mikepsinn'
+  - title: github
+    url: 'http://github.com/mikepsinn'
+  - title: linkedin
+    url: 'https://www.linkedin.com/in/mikesinn/'
+timezone: UTC
+title: Mike P. Sinn
+url: 'https://mikesinn.com'
