@@ -9,13 +9,14 @@ tools:
 - Google My Business
 - Excel
 layout: default
+years: 3
 modal-id: 26
 img: business-intelligence.png
-alt: business
-project-date: April 2014
+alt: business-intelligence
+project-date: April 2014 - Present
 project-name: St. Louis Testing Laboratories
 project-url: https://info.stltestlab.com
-description:  As the director of Chemical Testing, I saved the St. Louis Testing Laboratories thousands of man hours
-  by automating many formerly manual processes by building a customlaboratory information management system.
+description-disabled:  As the director of Chemical Testing, I saved the St. Louis Testing Laboratories thousands of man hours
+  by automating many formerly manual processes.
 ---
 

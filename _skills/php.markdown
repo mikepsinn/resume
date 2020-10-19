@@ -1,20 +1,13 @@
 ---
-title: Back-End Web Development
-tools:
-- Web Development
-- WordPress Plugin Development
-- AngularJS
-- MySQL
-- Javascript
-- PHP
-- Laravel
-modal-id: 13
-img: web-development.png
-alt: web-development
+title: PHP Programming
+importance: 9
+years: 9
+modal-id: 5675
+img: php.png
+alt: php
 project-name: QuantiModo
 project-url: https://web.quantimo.do
-description: I built this mobile responsive site using the Javascript framework AngularJS
-  for the front end. The back-end API, Analytics Engine, and Connector Framework was built using the Laravel PHP framework and MySQL.
+description: I built the back-end API, Analytics Engine, and Connector Framework was built using the Laravel PHP framework and MySQL.
 layout: default
 chips:
     title: 'I Have Experience with the Following Libraries'

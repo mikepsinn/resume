@@ -1,12 +1,11 @@
  <!-- Portfolio List -->
- {% for post in site.skills %}
+ {% assign posts = site.skills | sort: "years" | reverse %}
+ {% for post in posts %}
  <div class="portfolio-modal" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" aria-hidden="true">
   <div class="modal-content" style="padding: 0;">
    <div class="container">
-   {% include post.html %}
+   {% include skill.html %}
    </div>
   </div>
  </div>
-
-
 {% endfor %}

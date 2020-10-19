@@ -1,0 +1,14 @@
+ <!-- Portfolio List -->
+ {% assign posts = site.skills | sort: "years" | reverse %}
+ <section id="skill-raking">
+  <div class="container">
+    <h1 style="text-align: center;">Skill Levels</h1>
+    <hr class="star-primary">
+     {% for post in posts %}
+       {% assign percent = post.years | times: 100 | divided_by: 11 | round %}
+       {% assign hours = post.years | times: 2080 | round %}
+       <h3>{{post.title}}</h3>
+       {% include bar.html %}
+   {% endfor %}
+  </div>
+ </section>

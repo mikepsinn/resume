@@ -14,7 +14,7 @@
             </div>
             <br>
             <div class="row">
-                {% assign skills = site.skills | sort: 'modal-id' %}
+                {% assign skills = site.skills | sort: 'years' | reverse %}
                 <!-- Give skills with long title the highest modal-id so they're at the bottom or it breaks the layout -->
                 {% for skill in skills %}
                     <div class="col-sm-4 portfolio-item">
@@ -26,7 +26,12 @@
                             </div>
                             <img src="{{ site.url }}/img/portfolio/{{ skill.img }}" class="img-responsive" alt="{{ skill.alt }}">
                         </a>
-                        <h4 style="text-align: center;">{{ skill.title }}</h4>
+                        <h4 style="text-align: center; height: 20px;">{{ skill.title }}</h4>
+                        {% assign percent = skill.years | times: 100 | divided_by: 11 | round %}
+                        {% assign hours = skill.years | times: 2080 | round %}
+                        <div class="p-4 rounded-md">
+                            {% include bar.html %}
+                        </div>
                     </div>
                 {% endfor %}
             </div>

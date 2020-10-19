@@ -1,5 +1,5 @@
 ---
-title: Development Operations
+title: Software Development Operations
 tools:
 - AWS
 - Azure
@@ -16,6 +16,7 @@ tools:
 - Heroku
 - Netflify
 layout: default
+years: 7
 modal-id: 15
 img: devops.png
 alt: devops

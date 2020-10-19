@@ -1,6 +1,6 @@
 ---
 title: Chemical Analysis
-skills:
+tools:
 - Characterization Of Organic Compounds
 - Fourier Transform Infrared Spectroscopy
 - Identification Of Alloys 
@@ -38,6 +38,7 @@ skills:
 - EPA 40 CFR Part 98 Greenhouse Gas Carbon Compliance
 - Deformulations
 layout: default
+years: 5
 modal-id: 66
 img: chemist.png
 alt: chemical-testing

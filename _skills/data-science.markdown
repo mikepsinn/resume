@@ -6,9 +6,10 @@ tools:
 - Mobile Development
 - PHP
 layout: default
+years: 6
 modal-id: 11
 img: brain.png
-alt: brain
+alt: data-science
 project-date: 2012 - Present
 project-name: QuantiModo
 project-url: https://studies.quantimo.do
