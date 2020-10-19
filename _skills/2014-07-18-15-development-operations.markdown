@@ -1,6 +1,6 @@
 ---
 title: Development Operations
-categories:
+tools:
 - AWS
 - Azure
 - Jenkins

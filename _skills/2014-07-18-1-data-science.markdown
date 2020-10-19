@@ -1,6 +1,6 @@
 ---
 title: Data Science
-categories:
+tools:
 - Web Development
 - Machine Learning
 - Mobile Development

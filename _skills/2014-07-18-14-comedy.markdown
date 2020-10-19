@@ -1,6 +1,6 @@
 ---
 title: Comedy
-categories:
+tools:
 - Writing
 - Video Production
 - Sony Vegas Video

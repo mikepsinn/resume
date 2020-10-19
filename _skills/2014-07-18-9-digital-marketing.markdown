@@ -1,6 +1,6 @@
 ---
 title: Digital Marketing
-categories:
+tools:
 - Google Adwords
 - Google My Business
 - Google Search Console

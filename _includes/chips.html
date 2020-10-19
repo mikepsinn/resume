@@ -1,0 +1,24 @@
+<h3>{{chips.title}}</h3>
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <h2>{{ language.title }}</h2>
+        <!-- <img class="img-responsive" style="margin: auto; padding: 20px;" src="{{ language.image }}" alt=""> -->
+        <hr class="star-primary">
+    </div>
+</div>
+<div class="row">
+    <div class="flex flex-wrap justify-center">
+        {% for chip in chips.items %}
+        <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+            <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text-s  rounded-full">
+                    <img  style="margin-bottom: 0;" class="rounded-full" alt="A" src="{{ chip.image }}">
+                </div>
+            </div>
+            <div class="text-l font-normal leading-none max-w-full flex-initial">
+                {{ chip.title }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

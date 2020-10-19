@@ -14,19 +14,19 @@
             </div>
             <br>
             <div class="row">
-                {% assign items = site.posts | sort: 'modal-id' %}
-                <!-- Give items with long title the highest modal-id so they're at the bottom or it breaks the layout -->
-                {% for post in items %}
+                {% assign skills = site.skills | sort: 'modal-id' %}
+                <!-- Give skills with long title the highest modal-id so they're at the bottom or it breaks the layout -->
+                {% for skill in skills %}
                     <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <a href="#portfolioModal-{{ skill.modal-id }}" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
                                     <i class="fa fa-info-circle fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="{{ site.url }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                            <img src="{{ site.url }}/img/portfolio/{{ skill.img }}" class="img-responsive" alt="{{ skill.alt }}">
                         </a>
-                        <h4 style="text-align: center;">{{ post.title }}</h4>
+                        <h4 style="text-align: center;">{{ skill.title }}</h4>
                     </div>
                 {% endfor %}
             </div>

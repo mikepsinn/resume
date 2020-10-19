@@ -1,6 +1,6 @@
 ---
 title: Digital Health
-categories:
+tools:
 - Web Development
 - Android Development
 - iOS Development

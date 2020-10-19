@@ -1,6 +1,6 @@
 ---
 title: Chrome Extension Development
-categories:
+tools:
 - Javascript
 - HTML
 - CSS

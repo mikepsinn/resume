@@ -1,6 +1,6 @@
 ---
 title: Economic Analysis
-categories:
+tools:
 - Web Development
 - WordPress
 - Economic Analysis

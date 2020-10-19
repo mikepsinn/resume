@@ -1,6 +1,6 @@
 ---
 title: Music Composition & Production
-categories:
+tools:
 - Electronic Music Composition
 - Guitar
 - Vocals

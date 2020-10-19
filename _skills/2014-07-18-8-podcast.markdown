@@ -1,6 +1,6 @@
 ---
 title: Podcast Production
-categories:
+tools:
 - Writing
 - Digital Recording
 - Audio Post-Production

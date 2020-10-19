@@ -1,6 +1,6 @@
 ---
 title: iOS Development
-categories:
+tools:
 - Ionic
 - iOS Development
 - Cordova

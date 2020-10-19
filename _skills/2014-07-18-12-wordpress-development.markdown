@@ -1,6 +1,6 @@
 ---
 title: WordPress Plugin Development
-categories:
+tools:
 - WordPress Plugins Development
 - PHP
 - HTML

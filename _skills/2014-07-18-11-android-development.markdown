@@ -1,6 +1,6 @@
 ---
 title: Android Development
-categories:
+tools:
 - Ionic
 - Android Development
 - Cordova

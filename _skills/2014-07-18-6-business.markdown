@@ -1,6 +1,6 @@
 ---
 title: Business Intelligence
-categories:
+tools:
 - Google Adwords
 - Search Engine Optimization
 - Google Search Console
