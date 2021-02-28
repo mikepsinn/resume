@@ -1273,6 +1273,66 @@ var events = {
         //     " of the very first to use gloves while performing surgery as a way to prevent the spread of microbes" +
         //     "</p>", 34),
     ],
+    medicalInnovations: [
+        getAnnotation("Anesthesia", 1846,
+            "<p>" +
+            "Before the first use of a general anaesthetic in the mid-19th century, surgery was undertaken only as a last resort, with several patients opting for death rather than enduring the excruciating ordeal. Although there were countless earlier experiments with anaesthesia dating as far back to 4000 BC – William T. G. Morton made history in 1846 when he successfully used ether as an anaesthetic during surgery. Soon after, a faster-acting substance called chloroform became widely used, but was considered high-risk after several fatalities were reported. Over the 150 years since, safer anaesthetics have been developed, allowing millions of life-saving, painless operations to take place." +
+            "</p>", 40),
+        getAnnotation("Vaccines", 1799,
+            "<div class=\"edit\"><div class=\"row\"><div class=\"col-md-12\"><img src=\"https://info.Proclinical.com/hubfs/vaccines.jpg\" alt=\"vaccines\" class=\"initial loading\" data-was-processed=\"true\"></div><div><br></div></div></div>" +
+            "<p>" +
+            "It is difficult to pinpoint when vaccines became an accepted practice, mostly because the journey to " +
+            "discovery was long and complicated. Beginning with an attempt by Edward Jenner in 1796 to use" +
+            " inoculations to tame the infamous smallpox virus, the usefulness and popularity of vaccines " +
+            "grew very quickly. Throughout the 1800s and early 1900s, various vaccinations were created to combat" +
+            " some of the world’s deadliest diseases, including smallpox, rabies, tuberculosis, and cholera." +
+            " Over the course of 200 years, one of the deadliest diseases known to man – the small pox – was" +
+            " wiped off the face of the earth. Today, vaccines continue to save millions of lives each year -" +
+            " including jabs that protect against deadly flu strains and can help prevent some cancers."+
+            "</p>", 20),
+        getAnnotation("Medical Imaging", 1895,
+        "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+        "<p>" +
+        "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
+        "\n" +
+        "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
+        "\n" +
+        "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
+        "</p>", 51),
+        getAnnotation("Heart Surgery", 1923,
+            "<p>" +
+            "Eliot Cutler performs the world’s first successful heart valve surgery at the Peter Bent Brigham " +
+            "Hospital, today part of Brigham and Women’s Hospital." +
+            "</p>", 35),
+        getAnnotation("Penicillin", 1928,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/antibiotics.jpg\" alt=\"antibiotics\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "Alexander Fleming’s penicillin, the world’s first antibiotic, completely revolutionised the war against deadly bacteria. Famously, the Scottish biologist accidentally discovered the anti-bacterial ‘mould’ in a petri dish in 1928. However, Fleming’s incredible findings were not properly recognised until the 1940s, when they began being mass-produced by American drug companies for use in World War II. Two other scientists were responsible for the mass distribution of penicillin, Australian Howard Florey and Nazi-Germany refugee Ernst Chain, and their development of the substance ended up saving millions of future lives. Unfortunately, over the years certain bacterium have become increasingly resistant to antibiotics, leading to a world-wide crisis that calls for the pharmaceutical industry to develop new anti-bacterial treatments as soon as possible." +
+            "</p>", 41),
+        getAnnotation("Polio Treatment", 1929,
+            "<p>" +
+            "In a first, the newly developed Drinker Respirator (iron lung) saves a polio patient at Peter " +
+            "Bent Brigham in collaboration with Children's Hospital Medical Center, today Boston Children’s " +
+            "Hospital, and the Harvard School of Public Health." +
+            "</p>", 45),
+            getAnnotation("Organ Transplants", 1954,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Transplant.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>" +
+            "In December 1954, the first successful kidney transplant was carried out by Dr Joseph Murray and Dr David Hume in Boston, USA. Despite many previous attempts in history, this was the first instance where the recipient of an organ transplant survived the operation. The turning point came when various technical issues were overcome, such as vascular anastomosis (the connection between two blood vessels), placement of the kidney and immune response. In 1963, the first lung transplant was carried out, followed by a pancreas/kidney in 1966, and liver and heart in 1967. Aside from saving thousands of lives in the years following, transplant procedures have also become increasingly innovative and complex, with doctors successfully completing the first hand transplant in 1998 and full-face transplant in 2010!" +
+            "</p>", 42),
+        getAnnotation("Antiviral Drugs", 1960,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/virus%202.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
+            48),
+        getAnnotation("Stem Cell Therapy", 1970,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/stem%20cells.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>" +
+            "<p>The incredible potential of stem cells was discovered in the late 1970s, when they were found inside human cord blood. Two specific characteristics make stem cells remarkable: they are unspecialised cells that can renew themselves through cell division even after being inactive, and under certain conditions can be used to make any type of human cell. This discovery has enormous potential and stem cell therapy has already been used to treat leukaemia and other blood disorders, as well as in bone marrow transplantation. Research is currently ongoing to use stem cells to treat spinal cord injuries and a number of neurological conditions such as Alzheimer’s, Parkinson’ and strokes. However, due to the ethical issues surrounding the&nbsp;<a href=\"https://www.eurostemcell.org/embryonic-stem-cell-research-ethical-dilemma\" target=\"_blank\">use of embryonic stem cells</a>, researchers are likely to face many obstacles when developing stem cell-based therapy.&nbsp;&nbsp;</p>" +
+            48),
+        getAnnotation("Immunotherapy", 1979,
+            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Artificial%20Intelligence.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
+            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
+            55),
+    ],
     health: [
         getAnnotation("First Clinical Trial", 1740,
             "<p>The first proper clinical trial was conducted by the physician <a href=\"/wiki/James_Lind\" " +
@@ -1292,18 +1352,6 @@ var events = {
             " from the 17th century, but their use did not become widespread.<sup id=\"cite_ref-18\" class=\"reference\">" +
             "<a href=\"#cite_note-18\">[18]</a></sup>\n" +
             "</p>", 29),
-        getAnnotation("Vaccines", 1799,
-            "<div class=\"edit\"><div class=\"row\"><div class=\"col-md-12\"><img src=\"https://info.Proclinical.com/hubfs/vaccines.jpg\" alt=\"vaccines\" class=\"initial loading\" data-was-processed=\"true\"></div><div><br></div></div></div>" +
-            "<p>" +
-            "It is difficult to pinpoint when vaccines became an accepted practice, mostly because the journey to " +
-            "discovery was long and complicated. Beginning with an attempt by Edward Jenner in 1796 to use" +
-            " inoculations to tame the infamous smallpox virus, the usefulness and popularity of vaccines " +
-            "grew very quickly. Throughout the 1800s and early 1900s, various vaccinations were created to combat" +
-            " some of the world’s deadliest diseases, including smallpox, rabies, tuberculosis, and cholera." +
-            " Over the course of 200 years, one of the deadliest diseases known to man – the small pox – was" +
-            " wiped off the face of the earth. Today, vaccines continue to save millions of lives each year -" +
-            " including jabs that protect against deadly flu strains and can help prevent some cancers."+
-            "</p>", 29),
         getAnnotation("U.S. Pharmacopoeia", 1820,
             "<p>A major task of nineteenth- and early twentieth-century pharmacy was to define what a drug was and to create\n" +
             "       standards of composition, purity, and strength. Pioneering efforts in this direction had begun in 1820 with the\n" +
@@ -1316,11 +1364,11 @@ var events = {
             "        <a href=\"https://www.fdareview.org/features/glossary/#usp\"><i>USP</i></a>\n" +
             "       as new and better drugs, compositions, and tests were discovered and created. \n" +
             "<a href=\"http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf\"><i>USP</i></a>"+
-            "    </p>", 29),
+            "    </p>", 28),
         getAnnotation("Philadelphia College of Pharmacy", 1821,
             "Soon after the USP appeared, a group of druggists and\n" +
             "apothecaries, gathered in Philadelphia, founded the\n" +
-            "Philadelphia College of Pharmacy, the first local pharmacy organization in the United States. ", 29),
+            "Philadelphia College of Pharmacy, the first local pharmacy organization in the United States. ", 50),
         getAnnotation("American Journal of Pharmacy,", 1821,
             "Leafing through its\n" +
             "pages, we see what most\n" +
@@ -1332,7 +1380,7 @@ var events = {
             "materia medica: that is, the\n" +
             "sources of drugs, their form\n" +
             "and function, and medicinal\n" +
-            "activities. - http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 29),
+            "activities. - http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 35),
         getAnnotation("Cells", 1838,
             "<p>" +
             "In 1838 Matthias Jakob Shleiden discovers that all plants are made of cells and, within the same year, " +
@@ -1345,24 +1393,40 @@ var events = {
             "<p>" +
             "In 1845, Karl Theodor Ernst von " +
             "Siebold discovered that microbes are also made of cells too, though not many cells, just one cell." +
-            "</p>", 29),
+            "</p>", 20),
         getAnnotation("American Medical Association", 1849,
             "AMA establishes a board to analyze quack remedies and nostrums and to enlighten the public in " +
             "regard to the nature and danger of such remedies. " +
             "The Department of Investigation (1913-1975) gathered and disseminated health fraud and quackery information" +
             " for the public for over 60 years",
-            29),
+            30),
         getAnnotation("Retail Pharmacy Sector Exploded", 1860,
             "During the 1850s as\n" +
             "the retail pharmacy sector exploded. While the per capita\n" +
             "number of physicians stayed steady, the number of drugstores increased by nearly 25%. And many, if not most,\n" +
             "of these were run by “mere shopkeepers.” ",
-            29),
-        getAnnotation("Growth in Number of Schools of Pharmacy", 1880,
+            45),
+            
+        getAnnotation("Germs Discovered", 1860,
+        "<p>Before the ‘germ’ theory came about, the widely believed theory was that disease was caused by ‘spontaneous generation’. In other words, physicians of the time thought that disease could appear out of thin air, rather than being air-borne or transferred via skin-to-skin contact. In 1861, French microbiologist Louis Pasteur proved through a simple experiment that infectious disease was a result of an invasion of specific microscopic organisms - also known as pathogens - into living hosts. This new understanding marked a significant turning point in how diseases were treated, controlled and prevented, helping to prevent devastating epidemics that were responsible for thousands of deaths every year, such as the plague, dysentery and typhoid fever.&nbsp;&nbsp;</p>",
+        20),
+        getAnnotation("Growth in Schools of Pharmacy", 1880,
             "An influx of new state-affiliated pharmacy schools in the 1880s and 1890s helped to raise the\n" +
             "level the practice significantly. Many like the University of Wisconsin combined laboratory science with an\n" +
             "experiential requirement for graduation. - http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf",
-            29),
+            42),
+
+
+        getAnnotation("PATENT MEDICINES", 1880,
+            "As early as the late nineteenth and early twentieth century, interest in clinical\n" +
+            "objectivity grew, spurred on not only by astounding successes in laboratory science and clinical\n" +
+            "medicine abroad (e.g. discovery of microbes, pasteurization of milk, development of anthrax and\n" +
+            "rabies vaccines). In 1880, patent medicines constituted 28% of marketed drugs. By 1900, however, they\n" +
+            "represented 72% of drug sales. ",
+            25),
+        getAnnotation("Journal of the American Medical Association", 1883,
+            "Journal of the American Medical Association is first published; Nathan Davis is first editor. ",
+            31),
         getAnnotation("Industrial Pharmaceutical Manufacturing", 1895,
             "Large-scale manufacturers took\n" +
             "over the making of not only ingredients and preparations but entered the field of end dosage forms. The\n" +
@@ -1371,36 +1435,8 @@ var events = {
             "1900, one young woman in a factory could operate a\n" +
             "pair of machines punching out 100,000 headache tablets a day. Compounding, the crux of professional " +
             "practice in the late nineteenth century, started its great decline. " +
-            "- http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 34),
-        getAnnotation("Anesthesia", 1846,
-            "<p>" +
-            "Before the first use of a general anaesthetic in the mid-19th century, surgery was undertaken only as a last resort, with several patients opting for death rather than enduring the excruciating ordeal. Although there were countless earlier experiments with anaesthesia dating as far back to 4000 BC – William T. G. Morton made history in 1846 when he successfully used ether as an anaesthetic during surgery. Soon after, a faster-acting substance called chloroform became widely used, but was considered high-risk after several fatalities were reported. Over the 150 years since, safer anaesthetics have been developed, allowing millions of life-saving, painless operations to take place." +
-            "</p>", 30),
-        getAnnotation("Germs", 1860,
-            "<p>Before the ‘germ’ theory came about, the widely believed theory was that disease was caused by ‘spontaneous generation’. In other words, physicians of the time thought that disease could appear out of thin air, rather than being air-borne or transferred via skin-to-skin contact. In 1861, French microbiologist Louis Pasteur proved through a simple experiment that infectious disease was a result of an invasion of specific microscopic organisms - also known as pathogens - into living hosts. This new understanding marked a significant turning point in how diseases were treated, controlled and prevented, helping to prevent devastating epidemics that were responsible for thousands of deaths every year, such as the plague, dysentery and typhoid fever.&nbsp;&nbsp;</p>",
-            30),
-        getAnnotation("Patent Medicines", 1880,
-            "Nonetheless, as early as the late nineteenth and early twentieth century, interest in clinical\n" +
-            "objectivity grew, spurred on not only by astounding successes in laboratory science and clinical\n" +
-            "medicine abroad (e.g. discovery of microbes, pasteurization of milk, development of anthrax and\n" +
-            "rabies vaccines) but because of the sorry state of therapeutics at the time in America. In 1880,\n" +
-            "patent medicines – a misnomer because nothing but the label and the bottle were actually\n" +
-            "patented or trademarked – constituted 28% of marketed drugs. By 1900, however, they\n" +
-            "represented 72% of drug sales and products with inert ingredients were promoted as vigorously,\n" +
-            "if not more so, than drugs with active ingredients. ",
-            30),
-        getAnnotation("Journal of the American Medical Association", 1883,
-            "Journal of the American Medical Association is first published; Nathan Davis is first editor. ",
-            30),
-        getAnnotation("Medical Imaging", 1895,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/X-ray.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>" +
-            "The first medical imaging machines were X-rays. The X-ray, a form of electromagnetic radiation, was ‘accidentally’ invented in 1895 by German physicist Wilhelm Conrad Rӧntgen when experimenting with electrical currents through glass cathode-ray tubes. The discovery transformed medicine overnight and by the following year, Glasgow hospital opened the world's very first radiology department.\n" +
-            "\n" +
-            "Ultrasound, although originally discovered many years before, began being used for medical diagnosis in 1955. This medical imaging device uses high frequency sound waves to create a digital image, and was no less than ground-breaking in terms of detecting pre-natal conditions and other pelvic and abdominal abnormalities. In 1967, the computed tomography (CT) scanner was created, which uses X-ray detectors and computers to diagnose many different types of disease, and has become a fundamental diagnostic tool in modern medicine.\n" +
-            "\n" +
-            "The next major medical imaging technology was discovered in 1973 when Paul Lauterbur produced the first magnetic resonance image (MRI). The nuclear magnetic resonance data creates detailed images within the body and is a crucial tool in detecting life-threatening conditions including tumours, cysts, damage to the brain and spinal cord and some heart and liver problems." +
-            "</p>", 34),
+            "- http://acshist.scs.illinois.edu/bulletin_open_access/v28-1/v28-1%20p9-17.pdf", 38),
+
         getAnnotation("Council on Pharmacy and Chemistry", 1905,
             "The American Medical Association (AMA) began to push for federal evaluation of new medical\n" +
             "products hoping to make a dent in the patent medicine industry, but it was unsuccessful. In 1905,\n" +
@@ -1423,7 +1459,7 @@ var events = {
             "(JAMA) the Council began to make inroads against the commercialism that physicians had felt\n" +
             "were \"debauching\" medical journals and \"tainting\" medical textbooks. The AMA's drug\n" +
             "certification program remained in place until 1955. ",
-            30),
+            20),
         getAnnotation("Pure Food and Drugs Act", 1906,
             "While the AMA Council on Pharmacy and Chemistry held out a carrot of certification to ethical\n" +
             "drug products that met their standards, the first federal food and drug statute, the 1906 Pure Food\n" +
@@ -1442,11 +1478,11 @@ var events = {
             "many manufacturers to abandon use of many dangerous ingredients following passage of the\n" +
             "1906 Act. But efforts to prohibit false therapeutic claims on drug labels were defeated both by\n" +
             "the Supreme Court and the U.S. Congress. ",
-            36),
-        getAnnotation("Published Standards for American Medical Schools", 1910,
-            "The Flexner Report, Medical Education in the United States and Canada, funded by the Carnegie" +
-            " Foundation and supported by the AMA, is published and facilitates new standards for medical schools",
-            30),
+            25),
+        // getAnnotation("Published Standards for American Medical Schools", 1910,
+        //     "The Flexner Report, Medical Education in the United States and Canada, funded by the Carnegie" +
+        //     " Foundation and supported by the AMA, is published and facilitates new standards for medical schools",
+        //     30),
         getAnnotation("Principles Of Experimental Design", 1920,
             "<p>Sir <a href=\"/wiki/Ronald_A._Fisher\" class=\"mw-redirect\" title=\"Ronald A. Fisher\">" +
             "Ronald A. Fisher</a>, while working for the <a href=\"/wiki/Rothamsted_experimental_station\" class=\"mw-redirect\" title=\"Rothamsted experimental station\">" +
@@ -1463,48 +1499,32 @@ var events = {
             "<a href=\"/wiki/Interaction_(statistics)\" title=\"Interaction (statistics)\">interactions</a> of several independent factors." +
             "<sup id=\"cite_ref-MeinartTonascia_15-3\" class=\"reference\"><a href=\"#cite_note-MeinartTonascia-15\">[15]</a></sup>\n" +
             "</p>",
-            35),
+            25),
         getAnnotation("Cooperative Investigations", 1920,
             "During the 1920's, 30's and 40's medical researchers began to conduct \"cooperative\n" +
             "investigations\" designed to overcome errors attributed to individual observers working in relative\n" +
             "isolation and replace them with standardized evaluations of therapeutic research in hundreds of\n" +
-            "patients. 14 Therapeutic experimentation, however, did not begin to gain a true foothold in\n" +
+            "patients. Therapeutic experimentation, however, did not begin to gain a true foothold in\n" +
             "modern medicine until the U.S. legal system stopped equating experimentation with medical\n" +
             "malpractice. As late as 1934, state courts seemed to uphold traditional views that the doctor was\n" +
             "bound to act within accepted methods of clinical practice and that patients had not consented for\n" +
-            "their physician to deviate from these methods. 15 In a landmark state Supreme Court decision in\n" +
+            "their physician to deviate from these methods. In a landmark state Supreme Court decision in\n" +
             "1935, however, the state of Michigan seemed to recognize and authorize controlled clinical\n" +
             "investigations as a part of medical practice without subjecting the researcher to strict liability\n" +
             "(without fault) for any injury so long as the patient consented to the experiment and it did not\n" +
-            "\"vary too radically\" from accepted methods of procedure. 16 In particular, the Michigan Supreme\n" +
+            "\"vary too radically\" from accepted methods of procedure. In particular, the Michigan Supreme\n" +
             "Court accepted that experimentation was necessary not just to treat the individual, but also to\n" +
             "help medicine progress. \"We recognize,\" noted the Court, \"the fact that if the general practice of\n" +
             "medicine and surgery is to progress, there must be a certain amount of experimentation carried\n" +
             "on.\" ",
-            35),
-        getAnnotation("Heart Surgery", 1923,
-            "<p>" +
-            "Eliot Cutler performs the world’s first successful heart valve surgery at the Peter Bent Brigham " +
-            "Hospital, today part of Brigham and Women’s Hospital." +
-            "</p>", 35),
-        getAnnotation("Penicillin", 1928,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/antibiotics.jpg\" alt=\"antibiotics\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>" +
-            "Alexander Fleming’s penicillin, the world’s first antibiotic, completely revolutionised the war against deadly bacteria. Famously, the Scottish biologist accidentally discovered the anti-bacterial ‘mould’ in a petri dish in 1928. However, Fleming’s incredible findings were not properly recognised until the 1940s, when they began being mass-produced by American drug companies for use in World War II. Two other scientists were responsible for the mass distribution of penicillin, Australian Howard Florey and Nazi-Germany refugee Ernst Chain, and their development of the substance ended up saving millions of future lives. Unfortunately, over the years certain bacterium have become increasingly resistant to antibiotics, leading to a world-wide crisis that calls for the pharmaceutical industry to develop new anti-bacterial treatments as soon as possible." +
-            "</p>", 41),
-        getAnnotation("Polio Treatment", 1929,
-            "<p>" +
-            "In a first, the newly developed Drinker Respirator (iron lung) saves a polio patient at Peter " +
-            "Bent Brigham in collaboration with Children's Hospital Medical Center, today Boston Children’s " +
-            "Hospital, and the Harvard School of Public Health." +
-            "</p>", 45),
+            40),
         getAnnotation("Therapeutic Trials Committee", 1930,
             "<p>The <a href=\"/wiki/Medical_Research_Council_(United_Kingdom)\" title=\"Medical Research Council (United Kingdom)\">" +
             "British Medical Research Council</a> officially recognized the importance of clinical trials from the 1930s." +
             " The Council established the <i>Therapeutic Trials Committee</i> to advise and assist in the arrangement of properly " +
             "controlled clinical trials on new products that seem likely on experimental grounds to have value in the treatment of disease." +
             "<sup id=\"cite_ref-MeinartTonascia_15-4\" class=\"reference\"><a href=\"#cite_note-MeinartTonascia-15\">[15]</a></sup>\n" +
-            "</p>", 45),
+            "</p>", 34),
         getAnnotation("Food, Drug, and Cosmetic Act", 1938,
             "\"Instead of going to market based on their own assessment of the drug, sponsors had to\n" +
             "notify the FDA of their intent to market the drug by submitting an NDA (New Drug\n" +
@@ -1533,24 +1553,7 @@ var events = {
             "true double-blinding had little impact on the results, since Hill was able to show conclusively\n" +
             "that streptomycin could cure tuberculosis. When the results of his study were published in 1948,\n" +
             "Hill's use of concurrent controls (randomized, controlled) was praised as having ushered in \"a\n" +
-            "new era of medicine.\" 3", 45),
-        getAnnotation("Organ Transplants", 1954,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Transplant.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>" +
-            "In December 1954, the first successful kidney transplant was carried out by Dr Joseph Murray and Dr David Hume in Boston, USA. Despite many previous attempts in history, this was the first instance where the recipient of an organ transplant survived the operation. The turning point came when various technical issues were overcome, such as vascular anastomosis (the connection between two blood vessels), placement of the kidney and immune response. In 1963, the first lung transplant was carried out, followed by a pancreas/kidney in 1966, and liver and heart in 1967. Aside from saving thousands of lives in the years following, transplant procedures have also become increasingly innovative and complex, with doctors successfully completing the first hand transplant in 1998 and full-face transplant in 2010!" +
-            "</p>", 42),
-        getAnnotation("Antiviral Drugs", 1960,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/virus%202.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
-            48),
-        getAnnotation("Stem Cell Therapy", 1970,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/stem%20cells.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>" +
-            "<p>The incredible potential of stem cells was discovered in the late 1970s, when they were found inside human cord blood. Two specific characteristics make stem cells remarkable: they are unspecialised cells that can renew themselves through cell division even after being inactive, and under certain conditions can be used to make any type of human cell. This discovery has enormous potential and stem cell therapy has already been used to treat leukaemia and other blood disorders, as well as in bone marrow transplantation. Research is currently ongoing to use stem cells to treat spinal cord injuries and a number of neurological conditions such as Alzheimer’s, Parkinson’ and strokes. However, due to the ethical issues surrounding the&nbsp;<a href=\"https://www.eurostemcell.org/embryonic-stem-cell-research-ethical-dilemma\" target=\"_blank\">use of embryonic stem cells</a>, researchers are likely to face many obstacles when developing stem cell-based therapy.&nbsp;&nbsp;</p>" +
-            48),
-        getAnnotation("Immunotherapy", 1979,
-            "<div class=\"edit\"><img src=\"https://info.Proclinical.com/hubfs/Artificial%20Intelligence.jpg\" alt=\"\" class=\"loading\" data-was-processed=\"true\"></div>"+
-            "<p>Terrible viruses such as small-pox, influenza and hepatitis have ravaged many human populations throughout history. Unlike the sweeping success of antibiotics in the late 1930s and 1940s, the development of antivirals did not really take off until the 1960s. This was mostly due to the structure of a virus, which was a core of genetic material surrounded by a protective protein coat that hides and reproduces inside a person’s cells. As the virus information is so protected, it was difficult to treat them without damaging the host cell. Over the years antivirals have improved significantly, and work by blocking the rapid reproduction of viral infections, and some can even stimulate the immune system to attack the virus. The development of effective antivirals has been significant in treating and controlling the spread of deadly virus outbreaks such as HIV/AIDS, Ebola and rabies. </p>",
-            55),
+            "new era of medicine.\" 3", 25),
     ],
     fda: [
         getAnnotation("Law Requiring Ingredient List and Prohibiting False Claims", 1906,
@@ -1629,6 +1632,7 @@ function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotati
                 color: oneSeries.color
             }
         };
+        oneAxis.opposite = false;
         oneAxis.labels.style = {color: oneSeries.color};
         allY.push(oneAxis);
     }
@@ -1687,6 +1691,9 @@ function getConfig(scale, ordinal, title, startYear, endYear, subtitle, annotati
             min: Date.UTC(startYear, 1, 1),
             max: Date.UTC(endYear, 1, 1),
             ordinal: ordinal,
+            title:{
+                text: "Year"
+            }
         },
         yAxis: allY,
         legend: {
@@ -1715,6 +1722,24 @@ Highcharts.stockChart('long-term-container', getConfig(
     1999,
     'Using linear time-scale to illustrate the magnitude of improvement over such a short period of time',
     []));
+
+Highcharts.stockChart('life-expectancy-container', getConfig(
+    'linear',
+    false,
+    'Average Human Life-Expectancy',
+    -3000,
+    1999,
+    'Everything Sucked for Millions of Years and Life-Span Exploded', [],
+    [series.globalLifeExpectancy]));
+    
+Highcharts.stockChart('life-expectancy-events-container', getConfig(
+    'linear',
+    false,
+    'Events Leading to Health Explosion',
+    1810,
+    1975,
+    'These are the events that lead up to the explosion in human life-expectancy.', events.health,
+    [series.globalLifeExpectancy]));
 series.globalLifeExpectancy.series.visible = false;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
@@ -1761,12 +1786,12 @@ series.globalLifeExpectancy.series.visible = true;
 series.books.series.visible = false;
 series.gdp.series.visible = true;
 series.democracy.series.visible = true;
-Highcharts.stockChart('life-expectancy-annotations-container',
+Highcharts.stockChart('life-expectancy-annotations-ama-container',
     getConfig(
         'linear',
         //'logarithmic',
         true,
-        'Events Leading to the Health Explosion',
+        'Events Leading to the Health Explosion and AMA Members',
         1775,
         2000,
         'It appears that the discovery of cells and germs were the primary discoveries preceding the explosion in human lifespan.',
