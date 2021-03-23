@@ -1556,7 +1556,7 @@ var events = {
             "new era of medicine.\" 3", 25),
     ],
     fda: [
-        getAnnotation("Law Requiring Ingredient List and Prohibiting False Claims", 1906,
+        getAnnotation("Ingredient List and Prohibiting False Claims", 1906,
             "Pure Food and Drugs Act - While the AMA Council on Pharmacy and Chemistry held out a carrot of certification to ethical\n" +
             "drug products that met their standards, the first federal food and drug statute, the 1906 Pure Food\n" +
             "and Drugs Act, wielded little in the way of a stick. The AMA had been unsuccessful in getting\n" +
@@ -1574,7 +1574,7 @@ var events = {
             "many manufacturers to abandon use of many dangerous ingredients following passage of the\n" +
             "1906 Act. But efforts to prohibit false therapeutic claims on drug labels were defeated both by\n" +
             "the Supreme Court and the U.S. Congress. ",
-            45),
+            29),
         getAnnotation("FDA Requires Safety Trials", 1938,
             "\"Instead of going to market based on their own assessment of the drug, sponsors had to\n" +
             "notify the FDA of their intent to market the drug by submitting an NDA (New Drug\n" +
@@ -1583,7 +1583,7 @@ var events = {
             "drugs be studied by \"adequate tests by all methods reasonably applicable to show whether or not\n" +
             "the drug is safe.\"Sponsors were required to demonstrate to FDA that they had carried out all\n" +
             "reasonably applicable studies to demonstrate safety and that the drug was \"safe for use under the\n" +
-            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 55),
+            "conditions prescribed, recommended or suggested in the proposed labeling thereof.\" ", 63),
         getAnnotation("FDA Requires Efficacy Trials", 1962,
             "FDA Requires Trials Proving a Drug is Effective Before Anyone Can Buy It - " +
             "The Drug Efficacy Amendment, this amendment was signed into law in 1962 required manufacturers \n" +
@@ -1833,7 +1833,7 @@ Highcharts.stockChart('fda-container',
         [
             series.USLifeExpectancy,
             series.newDrugs,
-            series.SwissLifeExpectancy,
+            //series.SwissLifeExpectancy,
             //series.ama,
         ]
     )
