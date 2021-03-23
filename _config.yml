@@ -22,7 +22,7 @@ contact: static
 credits: '<a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a> <br> <a href="http://startbootstrap.com">Start Bootstrap</a>'
 description: Web Development - Data Science - Mobile Development
 disqus_shortname: mikepsinn
-email: m@thinkbynumbers.org
+email: m@crowdsourcingcures.org
 exclude:
   - Gemfile.lock
   - node_modules
