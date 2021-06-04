@@ -5,8 +5,8 @@ years: 9
 modal-id: 5675
 img: php.png
 alt: php
-project-name: QuantiModo
-project-url: https://web.quantimo.do
+project-name: The Journal of Citizen Science
+project-url: https://studies.crowdsourcingcures.org
 description: I built the back-end API, Analytics Engine, and Connector Framework was built using the Laravel PHP framework and MySQL.
 layout: default
 chips:

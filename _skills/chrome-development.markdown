@@ -9,8 +9,8 @@ years: 5
 modal-id: 50
 img: chrome.png
 alt: chrome-development
-project-name: MediModo Chrome Extension
-project-url: https://soundcloud.com/plutonium-kidz/sets/plutonium-kidz
-description: I composed/performed/recorded/edited vocals, bass and guitar with Sony Vegas.  I wrote/programmed the drums and synthesizers with Fruity Loops Digital Audio Workstation.  I hope you love it!
+project-name: MoodiModo Chrome Extension
+project-url: https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US
+description: MoodiModo makes tracking one's mood effortless. Click the smiley face in the upper right-hand corner, and you've just taken the first step towards true insights about what really affects your psychological state.
 ---
 

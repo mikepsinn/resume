@@ -5,8 +5,8 @@ years: 8
 modal-id: 654
 img: javascript.png
 alt: javascript
-project-name: QuantiModo
-project-url: https://web.quantimo.do
+project-name: Crowdsourcing Cures
+project-url: https://app.crowdsourcingcures.org
 description: I built this mobile responsive site using the Javascript framework AngularJS for the front end.
 layout: default
 chips:
