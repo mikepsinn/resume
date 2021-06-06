@@ -28,6 +28,16 @@
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
+
+                <ul class="list-inline-tight navbar-right" style="padding: 0;">
+                    {% for network in site.social %}
+                    <li style="padding: 0;">
+                        <a href="{{ network.url }}" class="btn-social btn-outline" style="padding: 0;">
+                            <i class="fa fa-fw fa-{{ network.title }}"></i>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>

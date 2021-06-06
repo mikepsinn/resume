@@ -261,6 +261,15 @@ section.success {
     transition: all .3s ease-in-out;
 }
 
+.btn-outline-dark {
+    margin-top: 15px;
+    border: solid 2px #2c3e50;
+    font-size: 20px;
+    color: #2c3e50;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
@@ -350,13 +359,24 @@ footer .footer-below {
 
 .btn-social {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border: 2px solid #fff;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
-    line-height: 45px;
+    line-height: 40px;
+}
+
+.btn-social-dark {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #2c3e50;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .btn:focus,
@@ -454,4 +474,11 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+
+.list-inline-tight>li {
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px
 }

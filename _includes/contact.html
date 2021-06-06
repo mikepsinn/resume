@@ -7,6 +7,16 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            <div class="footer-col col-md-4">
+                <h3>{{ site.footer.social }}</h3>
+                <ul class="list-inline">
+                    {% for network in site.social %}
+                    <li>
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
