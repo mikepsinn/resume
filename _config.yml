@@ -23,6 +23,7 @@ credits: '<a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</
 description: Web Development - Data Science - Mobile Development
 disqus_shortname: mikepsinn
 email: m@crowdsourcingcures.org
+formspree_url: https://formspree.io/f/xzbynebk
 exclude:
   - Gemfile.lock
   - node_modules
@@ -60,4 +61,3 @@ url: 'https://mikesinn.com'
 libraries:
 
   -
-      

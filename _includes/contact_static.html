@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div class="footer-col col-md-4" style="text-align: center;">
-			<ul class="list-inline-tight"  style="padding-left: 0; padding-right: 0;"> 
+			<ul class="list-inline-tight"  style="padding-left: 0; padding-right: 0;">
 				{% for network in site.social %}
 				<li style="color: #2c3e50" style="padding-left: 0; padding-right: 0;">
 					<a href="{{ network.url }}" class="btn-social-dark  btn-outline-dark" style="padding: 0;">
@@ -20,7 +20,8 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-				<form  action="//formspree.io/{{ site.email }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+				<form  action="{{ site.formspree_url }}" method="POST" name="sentMessage"
+				       id="contactForm" novalidate>
 					<div class="row control-group">
 						<div class="form-group col-xs-12 floating-label-form-group controls">
 							<label>Name</label>
