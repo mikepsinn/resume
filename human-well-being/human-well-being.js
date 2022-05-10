@@ -361,7 +361,7 @@ var series = {
     },
     SwissLifeExpectancy: {
         series: {
-            source: 'https://www.statista.com/statistics/1040079/life-expectancy-united-states-all-time/',
+            source: 'https://www.statista.com/statistics/1041467/life-expectancy-switzerland-all-time/',
             name: 'Swiss Life Expectancy',
             color: colors.purple,
             visible: true,
@@ -1406,7 +1406,7 @@ var events = {
             "number of physicians stayed steady, the number of drugstores increased by nearly 25%. And many, if not most,\n" +
             "of these were run by “mere shopkeepers.” ",
             45),
-            
+
         getAnnotation("Germs Discovered", 1860,
         "<p>Before the ‘germ’ theory came about, the widely believed theory was that disease was caused by ‘spontaneous generation’. In other words, physicians of the time thought that disease could appear out of thin air, rather than being air-borne or transferred via skin-to-skin contact. In 1861, French microbiologist Louis Pasteur proved through a simple experiment that infectious disease was a result of an invasion of specific microscopic organisms - also known as pathogens - into living hosts. This new understanding marked a significant turning point in how diseases were treated, controlled and prevented, helping to prevent devastating epidemics that were responsible for thousands of deaths every year, such as the plague, dysentery and typhoid fever.&nbsp;&nbsp;</p>",
         20),
@@ -1731,7 +1731,7 @@ Highcharts.stockChart('life-expectancy-container', getConfig(
     1999,
     'Everything Sucked for Millions of Years and Life-Span Exploded', [],
     [series.globalLifeExpectancy]));
-    
+
 Highcharts.stockChart('life-expectancy-events-container', getConfig(
     'linear',
     false,
