@@ -1,5 +1,12 @@
 # Mission
 
-My grandmother's brain is rotting.  She has Alzheimer's disease.  This is a biological problem that will be solved sooner or later.  Sooner, if we spend money on research to fully understand the mechanisms and experiment with potenential solutions.  Later, if we instead spend that money on other stuff. 
+Mission: **minimize human suffering by accelerating the development and accessibility of cures for diseases**—particularly dementia, mental illness, and chronic conditions—by leveraging **decentralized clinical trials, AI-driven research, and policy reform**.  
 
-The sector that gets the most of our resources is the financial sector.  Its share of the economy totals $2 trillion dollars.  In the 1960s, finance and insurance accounted for only 4% of GDP, whereas in 2007 finance and insurance accounted for 8% of GDP.
+Key initiatives:  
+- **Cure Acceleration Act** – A global framework to optimize public policy and incentives for rapid cure development.  
+- **Decentralized FDA (dFDA)** – An open-source, automated clinical trial platform to remove bureaucratic bottlenecks.  
+- **Right to Trial** – Ensuring patients can access experimental treatments and contribute data.  
+- **Wishonia & AI Agents** – Systems for problem-solving, collective intelligence, and automating high-impact tasks.  
+- **CureDAO & Crowdsourced Research** – Platforms for aggregating patient data and running decentralized, AI-assisted studies.  
+
+At a higher level, I'm working toward **creating a civilization free of unnecessary suffering** by aligning incentives, decentralizing power structures, and leveraging technology to make cures cheaper, faster, and more accessible.
